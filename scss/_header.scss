@@ -1,0 +1,22 @@
+header {
+    @include flex (row, space-evenly, center);
+    background-color: $colorHeader;
+    height: auto;
+    width: 100%;
+    grid-area: header;
+        nav {
+            ul {
+                @include flex (row, space-evenly, center);
+                color: $colorFondo;
+                height: auto;
+                width: 100%;
+            h1 {
+                margin:auto;
+                font-size: $tmTitulos;
+                color: $colorDestacado;
+                font-family: $fuenteTitulos;
+                text-transform: uppercase;
+            }
+        }
+    } 
+}

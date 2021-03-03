@@ -1,0 +1,18 @@
+footer {
+    background-color: $colorDestacado;
+    grid-area: footer;
+    .footer__flex {
+        @include flex(row, space-evenly, center);
+            p {
+            margin-right: 10%;
+            font-size: $tmTextosMQ;
+                ul  {
+                    
+                    .footer__iconos{
+                        @include flex(row, space-evenly, center);
+                        margin-left: 15%;
+                }
+            }
+        }
+    }
+}

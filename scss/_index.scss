@@ -1,0 +1,56 @@
+.grid__index {
+    @include grid(100%, auto auto auto, 2.5%, 1%);
+    height: 100vh;
+    text-align: center;
+    grid-template-areas:
+    "head"
+    "p"
+    "foot";
+
+        .titulo__index {
+            text-transform: uppercase;
+            transition: animation 1s, transform 1s;
+            animation: color__titulo infinite 5s;
+            &:hover {
+                transform:scale(95%);
+        }
+    }
+
+    .header__index {
+        height: 70vh;
+        @include flex (column, center, center);
+        grid-area: head;
+    }
+
+    .texto__index {
+        height: 10vh;
+        grid-area: p;
+    }
+
+    .footer__index {
+        background-color: $colorFondo;
+        height: 100%;
+        grid-area:foot;
+    }
+
+}
+
+// ANIMACION H1
+
+@keyframes color__titulo {
+    0% {
+        color: $colorDestacado;
+    }
+    30% {
+        color: $colorFondo;
+    }
+    50% {
+        color:  $colorTextos;
+    }
+    70% {
+            color: $colorFondo;
+    }
+    100% {
+        color: $colorDestacado;
+    }
+}

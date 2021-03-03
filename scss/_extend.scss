@@ -1,0 +1,50 @@
+%titulos {
+    color: $colorTitulos;
+    font-family: $fuenteTitulos;
+    font-size: $tmTitulos;
+}
+
+%tituloDestacado {
+    @extend %titulos;
+    color: $colorDestacado;
+}
+
+%textos {
+    color: $colorTextos;
+    font-size: $tmTextos;
+    font-family: $fuenteTextos;
+}
+
+%contacto {
+    font-family: $fuenteTextos;
+    font-size: $tmFormulario;
+    color: $colorTextos;
+    border-color: $colorFondo;
+    border: 0.5%;
+    border-style: solid;
+    border-radius: 3%;
+    padding: 2%;
+}
+
+%boton {
+    font-family: $fuenteTitulos;
+    font-size: $tmFormulario;
+    width: 300%;
+    padding: 8%;
+    margin:2%;
+    color: $colorFondo;
+    text-transform: uppercase;
+    background-color: $colorDestacado;
+}
+
+%barras {
+    background-color: $colorTextos;
+    margin: auto;
+    width: 30%;
+    height: 5%;
+    border: solid;
+    border-color: $colorDestacado;
+    border-radius: 5%;
+    z-index: 0;
+}
+
