@@ -1,0 +1,111 @@
+.grid__contacto {
+    height: 100vh;
+    @include grid(repeat(2, 1fr), 0.4fr auto 0.2fr, 2.5%, 0%);
+    grid-template-areas:
+        "header header"
+        "contacto contacto"
+        "footer footer"
+    }
+
+.contacto__flex {
+    margin-right: 30%;
+}
+
+form {
+    display: flex;
+    margin-right: 60%; 
+}
+
+fieldset {
+    @include flex (column, space-evenly, center);
+    border: none;
+}
+
+                                                        /* INPUT*/
+
+input {
+    @extend %contacto;
+    background-color: $colorFondo;
+    position:relative;
+    right:30%;
+    margin: 1%;
+    transition: border-color 0.5s, transform 0.5s;
+        &:hover{
+            border-color:$colorDestacado;
+            transform:scale(102%);
+    }
+}
+
+                                                        /* TEXTAREA*/
+
+textarea {
+    @extend %contacto;
+    background-color: $colorFondo;
+    margin: 1%;
+    position:relative;
+    right:30%;
+    transition: border-color 0.5s, transform 0.5s;
+        &:hover {
+        border-color: $colorDestacado;
+        transform:scale(102%);
+    }
+}
+
+                                                        /* BOTON*/
+
+.formulario__boton {
+    @extend %boton;
+    position:relative;
+    right:190%;
+    transition: background-color 0.5s, border-color 0.5s, color 0.5s, transform 0.5s;
+        &:hover {
+            cursor:pointer;
+            background-color: $colorFondo;
+            color: $colorDestacado;
+            border-color: $colorDestacado;
+            transform:scale(102%);
+    }
+}
+
+// IMAGEN 
+
+.imagen__contacto {
+    max-width: 50%;
+    border-radius: 50%;
+    border-color: $colorFondo;
+    border-style: solid;
+    border: 0.5%;
+    transition: border-color 0.3s, transform 0.3s;
+    &:hover {
+        border-color: $colorDestacado;
+        transform:scale(102%);
+    }
+}
+
+// CUADRO
+
+.contacto__cuadro {
+    animation: contacto__aparece 1s 1;
+    @include flex(row, center, center);
+    grid-area: contacto;
+    padding: 3%;
+    margin:auto;
+    border-radius: 2%;
+    box-shadow: 3px 5px 20px $colorTitulos;
+    width: 90%;
+    transition: transform 0.5s;
+    &:hover {
+        transform:scale(98%);
+    }
+}
+
+// ANIMACION CONTACTO
+
+@keyframes contacto__aparece {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}

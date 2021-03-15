@@ -1,5 +1,5 @@
 footer {
-    background-color: $colorDestacado;
+    background-color: $colorFondo;
     grid-area: footer;
     .footer__flex {
         @include flex(row, space-evenly, center);
