@@ -250,6 +250,7 @@ footer .footer__flex p ul .footer__iconos {
   }
 }
 .grid__juego {
+  background-color: #0b090b;
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr;

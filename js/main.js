@@ -19,6 +19,19 @@ class Celular {
     }
 }
 
+// Clase Herramienta
+
+class Herramienta {
+    constructor(nombre){
+        this.nombre = nombre;
+        this.uso = false;
+    }
+    usar(){
+        this.uso = true;
+    }
+}
+
+
 inventario.push(new Celular(0));
 
 // INTRODUCCION: Consigo el padre, contenedorJuego, y creo elemento "p", el primer diaologo introductorio.
@@ -35,41 +48,21 @@ let primeraOpcion = document.createElement("p");
 primeraOpcion.innerHTML = "Estás caminando a través del bosque, mirando con atención, y al lado de un árbol encontrás tirados un cuchillo y una linterna. Dado el reducido espacio de tu mochila, solo podés agarrar uno..."; 
 contenedorJuego.appendChild(primeraOpcion);
 
-// Agrego las opciones y las consecuencias a los arrays correspondientes.
+// Agrego las opciones desde la clase Herramienta y creo los botones a partir del nombre de los objetos.
 
-opciones.push("Linterna");
-opciones.push("Cuchillo");
+opciones.push(new Herramienta ("Cuchillo"));
+opciones.push(new Herramienta ("Linterna"));
+console.log(opciones);
 
 for (const opcion of opciones){
     let boton = document.createElement("button");
-    boton.innerHTML = opcion;
+    boton.innerHTML = opcion.nombre;
     contenedorJuego.appendChild(boton);
 }
 
 // consecuencias.push("Elegiste la linterna, seria conveniente guardarla para cuando oscuresca...");
 // consecuencias.push("Elegiste el cuchillo, tenelo en acceso rapido en caso de alguna urgencia.");
 
-// Clase Arma
-
-class Arma {
-    constructor(nombre, potencia){
-        this.nombre = nombre;
-        this.potencia = parseInt(potencia);
-    }
-}
-
-// Clase Linterna
-
-class Linterna{
-    constructor(pila){
-        this.pila = parseInt(pila);
-        this.encendida = false;
-    }
-    encender(){
-        this.encendida = true;
-        this.pila = this.pila--;
-    }
-}
 
 // //Bucle interactivo: se verifica la elección del usuario 
 // De acuerdo al objeto elegido, este se agrega al inventario. 
