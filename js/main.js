@@ -7,8 +7,9 @@ const inventario = [];
 // Clase Celular
 
 class Celular {
-    constructor(bateria){
-        this.bateria = parseInt(bateria);
+    constructor(datos){
+        this.nombre = datos.nombre;
+        this.bateria = parseInt(datos.bateria);
         this.signal = false;
     }
     cargar(){
@@ -22,8 +23,9 @@ class Celular {
 // Clase Herramienta
 
 class Herramienta {
-    constructor(nombre){
-        this.nombre = nombre;
+    constructor(datos){
+        this.nombre = datos.nombre;
+        this.imagen = datos.imagen;
         this.uso = false;
     }
     usar(){
@@ -32,7 +34,10 @@ class Herramienta {
 }
 
 
-inventario.push(new Celular(0));
+inventario.push(new Celular({
+                            nombre: "Celular",
+                            bateria: 0
+                            }));
 
 // INTRODUCCION: Consigo el padre, contenedorJuego, y creo elemento "p", el primer diaologo introductorio.
 
@@ -50,14 +55,48 @@ contenedorJuego.appendChild(primeraOpcion);
 
 // Agrego las opciones desde la clase Herramienta y creo los botones a partir del nombre de los objetos.
 
-opciones.push(new Herramienta ("Cuchillo"));
-opciones.push(new Herramienta ("Linterna"));
+opciones.push(new Herramienta ({
+                                nombre: "Cuchillo",
+                                imagen: "imagenes/placeholder_elemento.jpeg"
+                                }));
+opciones.push(new Herramienta ({
+                                nombre: "Linterna",
+                                imagen: "imagenes/placeholder_elemento2.jpeg"
+                                }));
 console.log(opciones);
 
 for (const opcion of opciones){
-    let boton = document.createElement("button");
-    boton.innerHTML = opcion.nombre;
-    contenedorJuego.appendChild(boton);
+    let objeto = document.createElement("button");
+    objeto.id = opcion.nombre; 
+    objeto.innerHTML = `<img src= ${opcion.imagen} alt= "Esto es un placeholder del ${opcion.nombre}">
+                        <p>${opcion.nombre}</p>`;
+    contenedorJuego.appendChild(objeto);
+}
+
+let cuchillo_btn = document.getElementById("Cuchillo");
+cuchillo_btn.onclick = () => {
+    let consecuenciaDos = document.createElement("p");
+    consecuenciaDos.innerHTML= "Elegiste el cuchillo, tenelo en acceso rapido en caso de alguna urgencia.";
+    inventario.push(new Herramienta ({
+        nombre: "Cuchillo",
+        imagen: "imagenes/placeholder_elemento.jpeg"
+        }));
+    console.log(inventario);
+    contenedorJuego.appendChild(consecuenciaDos);
+    linterna_btn.parentNode.removeChild(linterna_btn);
+}
+
+let linterna_btn = document.getElementById("Linterna");
+linterna_btn.onclick = () => {
+    let consecuenciaUno = document.createElement("p");
+    consecuenciaUno.innerHTML= "Elegiste la linterna, seria conveniente guardarla para cuando oscuresca...";
+    inventario.push(new Herramienta ({
+        nombre: "Linterna",
+        imagen: "imagenes/placeholder_elemento2.jpeg"
+        }));
+    console.log(inventario);
+    contenedorJuego.appendChild(consecuenciaUno);
+    cuchillo_btn.parentNode.removeChild(cuchillo_btn);
 }
 
 // consecuencias.push("Elegiste la linterna, seria conveniente guardarla para cuando oscuresca...");

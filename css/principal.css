@@ -250,19 +250,20 @@ footer .footer__flex p ul .footer__iconos {
   }
 }
 .grid__juego {
-  background-color: #0b090b;
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 0.5fr auto 0.5fr;
-  grid-row-gap: 2.5%;
+  grid-row-gap: 1%;
   grid-column-gap: 1%;
-  grid-template-areas: "header" "h1" "footer";
+  grid-template-areas: "header" "div" "footer";
 }
-.grid__juego main h2 {
+
+#contenedor_juego {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  grid-area: h1;
+  background-color: #0b090b;
+  grid-area: div;
 }
 
 .grid__contacto {

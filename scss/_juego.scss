@@ -1,15 +1,12 @@
 .grid__juego {
-    background-color: $colorFondo;
     height: 100vh;
-    @include grid(1fr, 0.5fr auto 0.5fr, 2.5%, 1%);
+    @include grid(1fr, 0.5fr auto 0.5fr, 1%, 1%);
     grid-template-areas:
         "header"
-        "h1"
-        "footer";
-
-        main {
-            h2 {
-            grid-area: h1;
-            }
-        } 
+        "div"
+        "footer"; 
+}
+    #contenedor_juego {
+            background-color: $colorFondo;
+            grid-area: div;
     }
