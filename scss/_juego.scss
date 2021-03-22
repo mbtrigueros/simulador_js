@@ -1,12 +1,36 @@
 .grid__juego {
     height: 100vh;
-    @include grid(1fr, 0.5fr auto 0.5fr, 1%, 1%);
+    @include grid(1fr, 0.5fr auto 0.5fr 0.5fr, 1%, 1%);
     grid-template-areas:
         "header"
         "div"
+        "inventario"
         "footer"; 
 }
     #contenedor_juego {
             background-color: $colorFondo;
             grid-area: div;
+            padding: 2%;
+            #cuchillo{
+                position: relative;
+                right: -50%;
+                width: 100px;
+                height: 100px;
+                cursor: pointer;
+            }
+            #linterna{
+                position: relative;
+                right: -50%;
+                width: 100px;
+                height: 100px;
+                cursor: pointer;
+            }
     }
+    #inventario_juego{
+        @include flex(row, space-evenly, center);
+        background-color: $colorFondo;
+        grid-area: inventario;
+        padding: 0.5%;
+        margin: 1%;
+    }
+
