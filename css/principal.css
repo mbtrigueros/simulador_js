@@ -263,6 +263,7 @@ footer .footer__flex p ul .footer__iconos {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   background-color: #0b090b;
+  filter: brightness(50%);
   grid-area: div;
   padding: 2%;
 }
@@ -292,6 +293,18 @@ footer .footer__flex p ul .footer__iconos {
   grid-area: inventario;
   padding: 0.5%;
   margin: 1%;
+}
+
+#cuchillo_li {
+  cursor: pointer;
+}
+
+#linterna_li {
+  cursor: pointer;
+}
+
+#celular_li {
+  cursor: pointer;
 }
 
 .grid__contacto {

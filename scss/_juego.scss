@@ -9,6 +9,7 @@
 }
     #contenedor_juego {
             background-color: $colorFondo;
+            filter: brightness(50%);
             grid-area: div;
             padding: 2%;
             #cuchillo{
@@ -34,3 +35,12 @@
         margin: 1%;
     }
 
+#cuchillo_li {
+    cursor: pointer;
+}
+#linterna_li {
+    cursor: pointer; 
+}
+#celular_li {
+    cursor: pointer;
+}
