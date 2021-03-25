@@ -1,3 +1,6 @@
+
+// Datos de los objetos que iran en el inventario
+
 const datos_herramientas = [{
     "nombre": "Celular",
     "imagen": "imagenes/placeholder_elemento3.jpeg",

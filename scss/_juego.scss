@@ -1,6 +1,6 @@
 .grid__juego {
     height: 100vh;
-    @include grid(1fr, 0.5fr auto 0.5fr 0.5fr, 1%, 1%);
+    @include grid(1fr, 0.5fr 70vh 0.5fr 0.5fr, 0.2%, 1%);
     grid-template-areas:
         "header"
         "div"
@@ -8,7 +8,12 @@
         "footer"; 
 }
     #contenedor_juego {
+            height: 70vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
             background-color: $colorFondo;
+            background-image: url("/imagenes/placeholder_fondo.jpeg");
             filter: brightness(50%);
             grid-area: div;
             padding: 2%;
@@ -32,8 +37,29 @@
         background-color: $colorFondo;
         grid-area: inventario;
         padding: 0.5%;
-        margin: 1%;
+        margin: 0.5%;
+        z-index: 1;
     }
+
+#camino_div {
+    cursor: pointer;
+    background-color:black;
+    width: 120px;
+    height: 200px;
+    position:absolute;
+    top:49%;
+    right: 0%;
+
+}
+
+#p_camino {
+    opacity: 0%;
+    transition: 1.5s;
+    z-index: -1;
+    &:hover {
+        cursor: pointer;
+        opacity:100%; }
+}
 
 #cuchillo_li {
     cursor: pointer;
@@ -43,4 +69,26 @@
 }
 #celular_li {
     cursor: pointer;
+}
+
+#img_pasto {
+    height: 10%;
+    width: 110%;
+    position: absolute;
+    margin: 1%;
+    right: -1%;
+    top: 85%;
+    z-index: -1;
+}
+
+#p_pasto {
+    position: absolute;
+    opacity: 0%;
+    right: 28%;
+    top: 85%;
+    transition: 1.5s;
+    &:hover {
+        cursor: pointer;
+        opacity:100%;
+    }
 }

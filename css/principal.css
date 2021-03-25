@@ -10,7 +10,7 @@ h1 {
 }
 
 p {
-  color: #ff00c8;
+  color: white;
   font-size: 1.2rem;
   font-family: "Roboto Mono", monospace;
 }
@@ -18,7 +18,7 @@ p {
 textarea, input {
   font-family: "Roboto Mono", monospace;
   font-size: 1.3rem;
-  color: #ff00c8;
+  color: white;
   border-color: #0b090b;
   border: 0.5%;
   border-style: solid;
@@ -92,7 +92,7 @@ a {
 a:hover {
   opacity: 60%;
   text-decoration: none;
-  color: #ff00c8;
+  color: white;
 }
 
 span {
@@ -112,13 +112,13 @@ nav ul li {
   margin: 2%;
 }
 nav ul li a {
-  color: #ff00c8;
+  color: white;
   transition: opacity 0.5s;
 }
 nav ul li a:hover {
   opacity: 60%;
   text-decoration: none;
-  color: #ff00c8;
+  color: white;
 }
 
 .mb__header {
@@ -240,7 +240,7 @@ footer .footer__flex p ul .footer__iconos {
     color: #0b090b;
   }
   50% {
-    color: #ff00c8;
+    color: white;
   }
   70% {
     color: #0b090b;
@@ -253,8 +253,8 @@ footer .footer__flex p ul .footer__iconos {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.5fr auto 0.5fr 0.5fr;
-  grid-row-gap: 1%;
+  grid-template-rows: 0.5fr 70vh 0.5fr 0.5fr;
+  grid-row-gap: 0.2%;
   grid-column-gap: 1%;
   grid-template-areas: "header" "div" "inventario" "footer";
 }
@@ -262,7 +262,12 @@ footer .footer__flex p ul .footer__iconos {
 #contenedor_juego {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
+  height: 70vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #0b090b;
+  background-image: url("/imagenes/placeholder_fondo.jpeg");
   filter: brightness(50%);
   grid-area: div;
   padding: 2%;
@@ -292,7 +297,28 @@ footer .footer__flex p ul .footer__iconos {
   background-color: #0b090b;
   grid-area: inventario;
   padding: 0.5%;
-  margin: 1%;
+  margin: 0.5%;
+  z-index: 1;
+}
+
+#camino_div {
+  cursor: pointer;
+  background-color: black;
+  width: 120px;
+  height: 200px;
+  position: absolute;
+  top: 49%;
+  right: 0%;
+}
+
+#p_camino {
+  opacity: 0%;
+  transition: 1.5s;
+  z-index: -1;
+}
+#p_camino:hover {
+  cursor: pointer;
+  opacity: 100%;
 }
 
 #cuchillo_li {
@@ -305,6 +331,28 @@ footer .footer__flex p ul .footer__iconos {
 
 #celular_li {
   cursor: pointer;
+}
+
+#img_pasto {
+  height: 10%;
+  width: 110%;
+  position: absolute;
+  margin: 1%;
+  right: -1%;
+  top: 85%;
+  z-index: -1;
+}
+
+#p_pasto {
+  position: absolute;
+  opacity: 0%;
+  right: 28%;
+  top: 85%;
+  transition: 1.5s;
+}
+#p_pasto:hover {
+  cursor: pointer;
+  opacity: 100%;
 }
 
 .grid__contacto {
