@@ -14,9 +14,8 @@
             background-size: cover;
             background-color: $colorFondo;
             background-image: url("/imagenes/placeholder_fondo.jpeg");
-            filter: brightness(50%);
+            filter: brightness(60%);
             grid-area: div;
-            padding: 2%;
             #cuchillo{
                 position: relative;
                 right: -50%;
@@ -44,10 +43,10 @@
 #camino_div {
     cursor: pointer;
     background-color:black;
-    width: 120px;
+    width: 150px;
     height: 200px;
     position:absolute;
-    top:49%;
+    top:51%;
     right: 0%;
 
 }
@@ -77,7 +76,7 @@
     position: absolute;
     margin: 1%;
     right: -1%;
-    top: 85%;
+    top: 87%;
     z-index: -1;
 }
 
@@ -91,4 +90,11 @@
         cursor: pointer;
         opacity:100%;
     }
+}
+
+// ANIMACIONES
+
+@keyframes oscurecerFondo {
+    from {filter: brightness(60%);}
+    to {filter: brightness(8%);}
 }

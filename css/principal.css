@@ -268,9 +268,8 @@ footer .footer__flex p ul .footer__iconos {
   background-size: cover;
   background-color: #0b090b;
   background-image: url("/imagenes/placeholder_fondo.jpeg");
-  filter: brightness(50%);
+  filter: brightness(60%);
   grid-area: div;
-  padding: 2%;
 }
 #contenedor_juego #cuchillo {
   position: relative;
@@ -304,10 +303,10 @@ footer .footer__flex p ul .footer__iconos {
 #camino_div {
   cursor: pointer;
   background-color: black;
-  width: 120px;
+  width: 150px;
   height: 200px;
   position: absolute;
-  top: 49%;
+  top: 51%;
   right: 0%;
 }
 
@@ -339,7 +338,7 @@ footer .footer__flex p ul .footer__iconos {
   position: absolute;
   margin: 1%;
   right: -1%;
-  top: 85%;
+  top: 87%;
   z-index: -1;
 }
 
@@ -355,6 +354,14 @@ footer .footer__flex p ul .footer__iconos {
   opacity: 100%;
 }
 
+@keyframes oscurecerFondo {
+  from {
+    filter: brightness(60%);
+  }
+  to {
+    filter: brightness(8%);
+  }
+}
 .grid__contacto {
   height: 100vh;
   display: grid;
@@ -463,4 +470,37 @@ textarea:hover {
   to {
     transform: translateX(0%);
   }
+}
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0b090b;
+  position: fixed;
+  max-width: 100%;
+  height: 70vh;
+}
+.modal #partida_nueva {
+  cursor: pointer;
+  color: white;
+  font-size: 2rem;
+}
+.modal #cargar_partida {
+  cursor: pointer;
+  color: white;
+  font-size: 2rem;
+}
+
+#modal-menu:target {
+  display: block;
+}
+
+.modal__cerrar {
+  color: #00ff22;
+  width: 6%;
+  height: auto;
+  position: absolute;
+  top: 0vh;
+  right: 1%;
 }
