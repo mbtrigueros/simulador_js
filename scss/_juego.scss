@@ -17,6 +17,7 @@
             filter: brightness(60%);
             grid-area: div;
             #cuchillo{
+                animation: aparecer ease-in 10s 1;
                 position: relative;
                 right: -50%;
                 width: 100px;
@@ -24,6 +25,7 @@
                 cursor: pointer;
             }
             #linterna{
+                animation: aparecer ease-in 10s 1;
                 position: relative;
                 right: -50%;
                 width: 100px;
@@ -97,4 +99,9 @@
 @keyframes oscurecerFondo {
     from {filter: brightness(60%);}
     to {filter: brightness(8%);}
+}
+
+@keyframes aparecer {
+    from{opacity: 0;}
+    to{opacity: 1;}
 }

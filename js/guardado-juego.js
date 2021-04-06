@@ -35,7 +35,7 @@ function guardadoJuego (){
                                 
                 break;
                 case "segunda_lin":
-                                        contenedorJuego.innerHTML = `<p>No tenes alternativa, vas a tener que seguir por este camino... al menos tenes la linterna. Esta puede ser de gran ayuda a la hora de encontrar pistas, y que no te tomen por sorpresa...</p>`;  
+                    contenedorJuego.innerHTML = `<p>No tenes alternativa, vas a tener que seguir por este camino... al menos tenes la linterna. Esta puede ser de gran ayuda a la hora de encontrar pistas, y que no te tomen por sorpresa...</p>`;  
                     oscurecerFondo();
                     document.getElementById("contenedor_juego").style = `background-image: url(imagenes/placeholder_fondo3.jpeg);`;                          
                     break;

@@ -30,6 +30,7 @@ function crearConsecuencias (con){
     contenedorJuego.appendChild(consecuencia);
 }
 
+
 // Funcion para oscurecer paulatinamente el fondo.
 
 function oscurecerFondo (){
@@ -38,8 +39,31 @@ function oscurecerFondo (){
     }
 }
 
+// Animacion para que los textos simulen estar siendo tipeados. 
 
+function typewrite(element,text,delay) {
 
+	/*
+	
+	Simula el tipeo de teclas
+	
+	element:	elemento donde insertar el texto.
+	text:		texto a tipear.
+	delay:		tiempo entre teclas (en milisegundos).
 
+	*/
+
+	// Insertar la siguiente letra
+	letra = document.getElementById(element).innerHTML;
+	letra = letra.concat(text.charAt(0));
+	document.getElementById(element).innerHTML = letra;
+
+	// Esperar "delay" milisegundos para la próxima tecla
+	if (text.length > 1) {
+		// Eliminar la tecla actual
+		text = text.substr(1);
+		setTimeout(typewrite,delay,element,text,delay);
+	}
+}
 
     

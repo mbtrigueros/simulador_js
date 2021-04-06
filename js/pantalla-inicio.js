@@ -13,13 +13,14 @@ function pantallaInicio (){
                             </div>
                             </div>`
 
-    let partidaNueva = document.getElementById("partida_nueva");
-    partidaNueva.onclick = () => {
+    $("#partida_nueva").click(function () { 
         estadoInicial();
-    }
+        
+    });
     
-    let cargarPartida = document.getElementById("cargar_partida");
-    cargarPartida.onclick = () => {
+    
+    $("#cargar_partida").click(function () { 
         guardadoJuego();
-    }
+        
+    });
 }

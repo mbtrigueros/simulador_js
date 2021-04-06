@@ -272,6 +272,7 @@ footer .footer__flex p ul .footer__iconos {
   grid-area: div;
 }
 #contenedor_juego #cuchillo {
+  animation: aparecer ease-in 10s 1;
   position: relative;
   right: -50%;
   width: 100px;
@@ -279,6 +280,7 @@ footer .footer__flex p ul .footer__iconos {
   cursor: pointer;
 }
 #contenedor_juego #linterna {
+  animation: aparecer ease-in 10s 1;
   position: relative;
   right: -50%;
   width: 100px;
@@ -360,6 +362,14 @@ footer .footer__flex p ul .footer__iconos {
   }
   to {
     filter: brightness(8%);
+  }
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 .grid__contacto {
