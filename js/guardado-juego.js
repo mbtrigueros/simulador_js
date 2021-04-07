@@ -26,8 +26,6 @@ function guardadoJuego (){
 
                             })
 
-                            
-
                 break;
 
                 case "cuchillo":
@@ -52,25 +50,20 @@ function guardadoJuego (){
 
                                 })
 
-                            
-                                
                                 
                 break;
 
-                case "segunda_lin":
-                    contenedorJuego.innerHTML = `<p>No tenes alternativa, vas a tener que seguir por este camino... al menos tenes la linterna. Esta puede ser de gran ayuda a la hora de encontrar pistas, y que no te tomen por sorpresa...</p>`;  
-                    oscurecerFondo();
-                    document.getElementById("contenedor_juego").style = `background-image: url(imagenes/placeholder_fondo3.jpeg);`;                          
+                case "tramoA":
+                        terceraSituacionTramoA();
                     break;
 
-                case "segunda_cuc":
-                    oscurecerFondo();
-                    document.getElementById("contenedor_juego").style = `background-image: url(imagenes/placeholder_fondo2.jpeg);`;                  
-                    contenedorJuego.innerHTML = `<p>Lograste cortar la maleza, ahora toca avanzar. Seria conveniente buscar pistas que te ayuden a recordar, al menos mientras puedes ver!</p>`;             
+                case "tramoB":
+                            terceraSituacionTramoB();
                     break;
 
                 default: 
-                estadoInicial();                
+                estadoInicial(); 
+                break;               
             }
         }
     }

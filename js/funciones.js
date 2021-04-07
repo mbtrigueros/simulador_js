@@ -1,11 +1,12 @@
+const URLJSON = "js/data.json";
+
 
 // Funcion para crear los botones que funcionaran como opciones para el usuario.
 
 function crearBoton(opcion){
     let objeto = document.createElement("div");
     objeto.id = opcion.nombre.toLowerCase(); 
-    objeto.innerHTML = `<img src= ${opcion.imagen} alt= "Esto es un placeholder del ${opcion.nombre}">
-                        <p>${opcion.nombre}</p>`;
+    objeto.innerHTML = `<img src= ${opcion.imagen} alt= "Esto es un placeholder del ${opcion.nombre}">`;
     contenedorJuego.appendChild(objeto);
 }
         

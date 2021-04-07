@@ -23,9 +23,33 @@
 },
 
 {    
-    "nombre": "Remera",
-    "imagen": "#",
-    "uso": false
+    "nombre": "Camisa ensangrentada",
+    "imagen": "imagenes/placeholder_camisa.jpeg",
+    "ver": false
+},
+
+{
+    "nombre":"Foto",
+    "imagen":"imagenes/placeholder_foto.jpeg",
+    "ver": false
+},
+
+{
+    "nombre": "Carta",
+    "imagen": "imagenes/placeholder_carta.jpeg",
+    "ver": false
+},
+
+{
+    "nombre": "Simbolo",
+    "imagen": "imagenes/placeholder_simbolo.jpeg",
+    "ver": false
+}, 
+
+{
+    "nombre": "Esqueleto",
+    "imagen":"imagenes/placeholder_esqueleto.jpeg",
+    "ver": false
 }
 
 ]

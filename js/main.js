@@ -9,7 +9,6 @@ const contenedorJuego = document.getElementById("contenedor_juego");
 
 
     // llamada asincronica con AJAX
-    const URLJSON = "js/data.json"
     $.getJSON(URLJSON, function (datos, estado) {
         
         inventario.push(new Herramienta(datos[0]));

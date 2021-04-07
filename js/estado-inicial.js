@@ -1,3 +1,4 @@
+
 function estadoInicial (){
     
     localStorage.clear();
@@ -5,9 +6,9 @@ function estadoInicial (){
 // llamada asincronica con AJAX
 $.getJSON(URLJSON, function (datos, estado) {
 
-            // compruebo que este todo ok
-            console.log(estado);
-            console.log(datos);
+    // compruebo que este todo ok
+    console.log(estado);
+    console.log(datos);
 
 // INTRODUCCION: Consigo el padre, contenedorJuego, y genero el HTML con dos p, el msj introductorio y la primera propuesta al usuario.
 
@@ -40,6 +41,8 @@ $("#p_2").fadeIn(20000, () => {
             opciones.push(new Herramienta (datos[2]));
             console.log(opciones);
 
+        
+
             for (const opcion of opciones){
                 crearBoton(opcion);
             }
@@ -50,10 +53,9 @@ $("#p_2").fadeIn(20000, () => {
         
             guardadoJuego();
 
-                    })
-    
+        })
 
-    }) 
+    })
 
 }
 
