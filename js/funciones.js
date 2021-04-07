@@ -43,16 +43,6 @@ function oscurecerFondo (){
 
 function typewrite(element,text,delay) {
 
-	/*
-	
-	Simula el tipeo de teclas
-	
-	element:	elemento donde insertar el texto.
-	text:		texto a tipear.
-	delay:		tiempo entre teclas (en milisegundos).
-
-	*/
-
 	// Insertar la siguiente letra
 	letra = document.getElementById(element).innerHTML;
 	letra = letra.concat(text.charAt(0));

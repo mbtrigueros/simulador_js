@@ -2,6 +2,13 @@ function estadoInicial (){
     
     localStorage.clear();
 
+// llamada asincronica con AJAX
+$.getJSON(URLJSON, function (datos, estado) {
+
+            // compruebo que este todo ok
+            console.log(estado);
+            console.log(datos);
+
 // INTRODUCCION: Consigo el padre, contenedorJuego, y genero el HTML con dos p, el msj introductorio y la primera propuesta al usuario.
 
 // variables parrafos
@@ -27,25 +34,26 @@ typewrite("p_1", p1, 50);
 $("#p_2").fadeIn(20000, () => {
     
     typewrite("p_2", p2, 60);
+
+
+            opciones.push(new Herramienta (datos[1]));
+            opciones.push(new Herramienta (datos[2]));
+            console.log(opciones);
+
+            for (const opcion of opciones){
+                crearBoton(opcion);
+            }
+
+            eventoLinterna();
+
+            eventoCuchillo();
+        
+            guardadoJuego();
+
+                    })
     
-    // Agrego las opciones desde la clase Herramienta y creo los botones a partir del nombre de los objetos.
 
-    opciones.push(new Herramienta (datos_herramientas[1]));
-    opciones.push(new Herramienta (datos_herramientas[2]));
-    console.log(opciones);
+    }) 
 
-    // Creo las opciones como elementos usando la funcion crearBoton.
-
-    for (const opcion of opciones){
-        crearBoton(opcion);
-    }
-    
-    eventoLinterna();
-
-    eventoCuchillo();
-
-    guardadoJuego();
-
-        }
-    ) 
 }
+

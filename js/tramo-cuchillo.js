@@ -2,24 +2,36 @@ function eventoCuchillo() {
 
     let cuchillo_btn = document.getElementById("cuchillo");
     cuchillo_btn.onclick = () => {
-        // crearConsecuencias(consecuencias[1]);
-        inventario.push(new Herramienta (datos_herramientas[2]));
+
+        // llamada asincronica con AJAX
+        $.getJSON(URLJSON, function (datos, estado) {
+
+        inventario.push(new Herramienta (datos[2]));
         crearElementos(inventario[1]);
         console.log(inventario);
         almacenoCuchillo();
         segundaSituacion();
-        usarCuchillo();
+        usarCuchillo(); 
+    
+            })
         }
     }
 
 function almacenoCuchillo() {
+
+    // llamada asincronica con AJAX
+    $.getJSON(URLJSON, function (datos, estado) {
+    
         // Almaceno el elemento elegido en el Almacenamiento Local.
-    const almacenado_cuc = JSON.stringify(datos_herramientas[2]);
-    localStorage.setItem("cuchillo", almacenado_cuc);
-    // Obtengo el mismo y lo veo por consola. La idea es luego poder usar esta informacion como punto de guardado. 
-    const almacenado_cuc2 = JSON.parse(localStorage.getItem("cuchillo"));
-    console.log(almacenado_cuc2);
-    }
+    
+        const almacenado_cuc = JSON.stringify(datos[2]);
+        localStorage.setItem("cuchillo", almacenado_cuc);
+        // Obtengo el mismo y lo veo por consola. La idea es luego poder usar esta informacion como punto de guardado. 
+        const almacenado_cuc2 = JSON.parse(localStorage.getItem("cuchillo"));
+        console.log(almacenado_cuc2);
+
+            })
+        }
 
     function usarCuchillo (){
 
