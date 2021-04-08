@@ -1,3 +1,5 @@
+
+
 // Funcion para crear la segunda situacion, la misma va a depender del objeto elegido en la instancia anterior.
 
 function segundaSituacion (){
@@ -10,11 +12,18 @@ function segundaSituacion (){
                                 </div>`;
 
     if(inventario.find(elemento => elemento.nombre == "Cuchillo")){
+
         let pasto_img = document.getElementById("img_pasto");
         pasto_img.onclick = () => { 
             if (inventario[1].uso == true){
+
+                localStorage.setItem("tramoB", "Situacion 2, tramo B");
+                localStorage.getItem("tramoB");        
+                            
                 terceraSituacionTramoB();
-                }
+
+                
+            }
             }
         }
 
@@ -24,8 +33,13 @@ function segundaSituacion (){
                 let camino_d = document.getElementById("camino_div");
                 camino_d.onclick = () => { 
                     if (inventario[1].uso == true){
+
+                        localStorage.setItem("tramoA", "Situacion 2, tramo A");
+                        localStorage.getItem("tramoA");
+                        
                         terceraSituacionTramoA();
-                        }
+                        
+                    }
                     }
                 }
             

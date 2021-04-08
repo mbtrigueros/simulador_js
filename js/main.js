@@ -4,12 +4,10 @@ const consecuencias = [];
 const inventario = [];
 const contenedorJuego = document.getElementById("contenedor_juego");
 
-
-// Agrego elemento "Celular" de tipo Herramienta al inventario.
-
-
     // llamada asincronica con AJAX
     $.getJSON(URLJSON, function (datos, estado) {
+
+// Agrego elemento "Celular" de tipo Herramienta al inventario.        
         
         inventario.push(new Herramienta(datos[0]));
         console.log(inventario); 
@@ -23,4 +21,5 @@ const contenedorJuego = document.getElementById("contenedor_juego");
         $(document).ready(function(){
             console.log("dom listo");
             pantallaInicio();
+            
     })

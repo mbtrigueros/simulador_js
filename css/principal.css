@@ -272,20 +272,78 @@ footer .footer__flex p ul .footer__iconos {
   grid-area: div;
 }
 #contenedor_juego #cuchillo {
-  animation: aparecer ease-in 10s 1;
+  transition: ease-in 0.5s;
+  animation: aparecer ease-in 2s 1;
   position: relative;
   right: -50%;
   width: 100px;
   height: 100px;
+}
+#contenedor_juego #cuchillo :hover {
   cursor: pointer;
+  border: solid whitesmoke 1px;
 }
 #contenedor_juego #linterna {
-  animation: aparecer ease-in 10s 1;
+  transition: ease-in 0.5s;
+  animation: aparecer ease-in 2s 1;
   position: relative;
   right: -50%;
   width: 100px;
   height: 100px;
+}
+#contenedor_juego #linterna :hover {
   cursor: pointer;
+  border: 0.5px whitesmoke solid;
+}
+#contenedor_juego #camisa {
+  transition: ease-in 0.5s;
+  position: relative;
+  right: 20%;
+  top: 30%;
+}
+#contenedor_juego #camisa :hover {
+  cursor: pointer;
+  border: solid whitesmoke 0.5px;
+}
+#contenedor_juego #simbolo {
+  transition: ease-in 0.5s;
+  position: relative;
+  right: 10%;
+  top: 50%;
+}
+#contenedor_juego #simbolo :hover {
+  cursor: pointer;
+  border: solid whitesmoke 0.5px;
+}
+#contenedor_juego #carta {
+  transition: ease-in 0.5s;
+  position: relative;
+  right: 10%;
+  top: 50%;
+}
+#contenedor_juego #carta :hover {
+  cursor: pointer;
+  border: solid whitesmoke 0.5px;
+}
+#contenedor_juego #foto {
+  transition: ease-in 0.5s;
+  position: relative;
+  right: 25%;
+  top: 30%;
+}
+#contenedor_juego #foto :hover {
+  cursor: pointer;
+  border: solid whitesmoke 0.5px;
+}
+#contenedor_juego #esqueleto {
+  transition: ease-in 0.5s;
+  position: relative;
+  right: 25%;
+  top: 30%;
+}
+#contenedor_juego #esqueleto :hover {
+  cursor: pointer;
+  border: solid whitesmoke 0.5px;
 }
 
 #inventario_juego {
@@ -323,18 +381,27 @@ footer .footer__flex p ul .footer__iconos {
 }
 
 #cuchillo_li {
-  cursor: pointer;
   animation: aparecer 2s 1 ease-in;
+}
+#cuchillo_li:hover {
+  cursor: pointer;
+  border: solid whitesmoke 0.5px;
 }
 
 #linterna_li {
-  cursor: pointer;
   animation: aparecer 2s 1 ease-in;
+}
+#linterna_li:hover {
+  cursor: pointer;
+  border: solid whitesmoke 0.5px;
 }
 
 #celular_li {
-  cursor: pointer;
   animation: aparecer 2s 1 ease-in;
+}
+#celular_li:hover {
+  cursor: pointer;
+  border: solid whitesmoke 0.5px;
 }
 
 #img_pasto {
@@ -364,7 +431,7 @@ footer .footer__flex p ul .footer__iconos {
     filter: brightness(60%);
   }
   to {
-    filter: brightness(8%);
+    filter: brightness(2.5%);
   }
 }
 @keyframes aparecer {

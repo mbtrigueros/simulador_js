@@ -1,4 +1,4 @@
-const URLJSON = "js/data.json";
+
 
 
 // Funcion para crear los botones que funcionaran como opciones para el usuario.
@@ -36,25 +36,25 @@ function crearConsecuencias (con){
 
 function oscurecerFondo (){
         onmousemove = e => {
-        document.getElementById("contenedor_juego").style.animation = "oscurecerFondo 10s ease-in forwards";
+        document.getElementById("contenedor_juego").style.animation = "oscurecerFondo 5s ease-in forwards";
     }
 }
 
 // Animacion para que los textos simulen estar siendo tipeados. 
 
-function typewrite(element,text,delay) {
 
-	// Insertar la siguiente letra
-	letra = document.getElementById(element).innerHTML;
-	letra = letra.concat(text.charAt(0));
-	document.getElementById(element).innerHTML = letra;
+// function typewrite(element,text,delay) {
 
-	// Esperar "delay" milisegundos para la próxima tecla
-	if (text.length > 1) {
-		// Eliminar la tecla actual
-		text = text.substr(1);
-		setTimeout(typewrite,delay,element,text,delay);
-	}
-}
+// 	// Insertar la siguiente letra
+// 	letra = document.getElementById(element).innerHTML;
+// 	letra = letra.concat(text.charAt(0));
+// 	document.getElementById(element).innerHTML = letra;
 
+// 	// Esperar "delay" milisegundos para la próxima tecla
+// 	if (text.length > 1) {
+// 		// Eliminar la tecla actual
+// 		text = text.substr(1);
+// 		setTimeout(typewrite,delay,element,text,delay);
+// 	}
+// }
     

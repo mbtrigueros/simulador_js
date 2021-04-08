@@ -7,6 +7,7 @@
         "inventario"
         "footer"; 
 }
+
     #contenedor_juego {
             height: 70vh;
             background-position: center;
@@ -16,21 +17,82 @@
             background-image: url("/imagenes/placeholder_fondo.jpeg");
             filter: brightness(60%);
             grid-area: div;
+
             #cuchillo{
-                animation: aparecer ease-in 10s 1;
+                transition: ease-in 0.5s;
+                animation: aparecer ease-in 2s 1;
                 position: relative;
                 right: -50%;
                 width: 100px;
                 height: 100px;
-                cursor: pointer;
+                & :hover{
+                    cursor:pointer;
+                    border: solid whitesmoke 1px;
+                }
             }
+
             #linterna{
-                animation: aparecer ease-in 10s 1;
+                transition: ease-in 0.5s;
+                animation: aparecer ease-in 2s 1;
                 position: relative;
                 right: -50%;
                 width: 100px;
                 height: 100px;
-                cursor: pointer;
+                & :hover{
+                    cursor:pointer;
+                    border: 0.5px whitesmoke solid;
+                }
+            }
+
+            #camisa{
+                transition: ease-in 0.5s;
+                position:relative;
+                right: 20%;
+                top:30%;
+                & :hover{
+                    cursor:pointer;
+                    border: solid whitesmoke 0.5px;
+                }
+            }
+            #simbolo{
+                transition: ease-in 0.5s;
+                position:relative;
+                right: 10%;
+                top:50%;
+                & :hover{
+                    cursor:pointer;
+                    border: solid whitesmoke 0.5px;
+                }
+            }
+            #carta{
+                transition: ease-in 0.5s;
+                position:relative;
+                right: 10%;
+                top:50%;
+                & :hover{
+                    cursor:pointer;
+                    border: solid whitesmoke 0.5px;
+                }
+            }
+            #foto{
+                transition: ease-in 0.5s;
+                position:relative;
+                right: 25%;
+                top:30%;
+                & :hover{
+                    cursor:pointer;
+                    border: solid whitesmoke 0.5px;
+                }
+            }
+            #esqueleto{
+                transition: ease-in 0.5s;
+                position:relative;
+                right: 25%;
+                top:30%;
+                & :hover{
+                    cursor:pointer;
+                    border: solid whitesmoke 0.5px;
+                }
             }
     }
     #inventario_juego{
@@ -63,16 +125,25 @@
 }
 
 #cuchillo_li {
-    cursor: pointer;
     animation: aparecer 2s 1 ease-in;
+    &:hover {
+        cursor: pointer;
+        border: solid whitesmoke 0.5px;
+        }
 }
 #linterna_li {
-    cursor: pointer; 
     animation: aparecer 2s 1 ease-in;
+    &:hover {
+        cursor: pointer;
+        border: solid whitesmoke 0.5px;
+    }
 }
 #celular_li {
-    cursor: pointer;
     animation: aparecer 2s 1 ease-in;
+    &:hover {
+        cursor: pointer;
+        border: solid whitesmoke 0.5px;
+    }
 }
 
 #img_pasto {
@@ -101,7 +172,7 @@
 
 @keyframes oscurecerFondo {
     from {filter: brightness(60%);}
-    to {filter: brightness(8%);}
+    to {filter: brightness(2.5%);}
 }
 
 @keyframes aparecer {

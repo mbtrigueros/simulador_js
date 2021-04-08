@@ -1,3 +1,5 @@
+const URLJSON = "js/data.json";
+
 // Clase Herramienta
 
 class Herramienta {
