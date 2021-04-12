@@ -9,7 +9,7 @@ h1 {
   color: #00ff22;
 }
 
-p {
+span, p {
   color: white;
   font-size: 1.2rem;
   font-family: "VT323", monospace;
@@ -93,11 +93,6 @@ a:hover {
   opacity: 60%;
   text-decoration: none;
   color: white;
-}
-
-span {
-  color: #00ff22;
-  font-style: italic;
 }
 
 img {
@@ -426,12 +421,16 @@ footer .footer__flex p ul .footer__iconos {
   opacity: 100%;
 }
 
+#introduccion {
+  margin: 5%;
+}
+
 @keyframes oscurecerFondo {
   from {
     filter: brightness(60%);
   }
   to {
-    filter: brightness(2.5%);
+    filter: brightness(5%);
   }
 }
 @keyframes aparecer {

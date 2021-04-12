@@ -62,8 +62,7 @@ a {
 }
 
 span {
-    color: $colorTitulos;
-    font-style: italic;
+    @extend %textos;
 }
 
 img {

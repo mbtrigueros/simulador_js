@@ -168,11 +168,16 @@
     }
 }
 
+#introduccion {
+    margin: 5%;
+}
+
+
 // ANIMACIONES
 
 @keyframes oscurecerFondo {
     from {filter: brightness(60%);}
-    to {filter: brightness(2.5%);}
+    to {filter: brightness(5%);}
 }
 
 @keyframes aparecer {
