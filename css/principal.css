@@ -425,6 +425,14 @@ footer .footer__flex p ul .footer__iconos {
   margin: 5%;
 }
 
+#txt_tramoA {
+  margin: 2%;
+}
+
+#txt_tramoB {
+  margin: 2%;
+}
+
 @keyframes oscurecerFondo {
   from {
     filter: brightness(60%);

@@ -11,8 +11,7 @@ $.getJSON(URLJSON, function (datos, estado) {
     console.log(estado);
     console.log(datos);
 
-// INTRODUCCION: Consigo el padre, contenedorJuego, y genero el HTML con dos p, el msj introductorio y la primera propuesta al usuario.
-
+// INTRODUCCION
 
 contenedorJuego.innerHTML = `<div id = "introduccion"></div>
                             <div>

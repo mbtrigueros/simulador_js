@@ -13,7 +13,7 @@ function eventoLinterna () {
             segundaSituacion();
             usarLinterna();
 
-        })
+            })
         } 
     }
 
@@ -29,7 +29,7 @@ function almacenoLinterna () {
         const almacenado_lin2 = JSON.parse(localStorage.getItem("linterna"));
         console.log(almacenado_lin2);
 
-    })
+        })
     }
 
 function usarLinterna (){

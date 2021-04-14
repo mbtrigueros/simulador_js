@@ -1,4 +1,5 @@
 // Variables
+
 const opciones = [];
 const consecuencias = [];
 const inventario = [];

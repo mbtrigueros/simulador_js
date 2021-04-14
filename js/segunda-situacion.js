@@ -1,5 +1,3 @@
-
-
 // Funcion para crear la segunda situacion, la misma va a depender del objeto elegido en la instancia anterior.
 
 function segundaSituacion (){
@@ -21,14 +19,12 @@ function segundaSituacion (){
                 localStorage.getItem("tramoB");        
                             
                 terceraSituacionTramoB();
-
                 
-            }
+                }
             }
         }
 
             else { 
-
 
                 let camino_d = document.getElementById("camino_div");
                 camino_d.onclick = () => { 
@@ -39,7 +35,7 @@ function segundaSituacion (){
                         
                         terceraSituacionTramoA();
                         
-                    }
+                        }
                     }
                 }
             
