@@ -25,30 +25,35 @@
 {    
     "nombre": "Camisa",
     "imagen": "imagenes/placeholder_camisa.jpeg",
+    "imagen2": "imagenes/placeholder_carta_2.jpeg",
     "ver": false
 },
 
 {
     "nombre":"Foto",
     "imagen":"imagenes/placeholder_foto.jpeg",
+    "imagen2": "imagenes/placeholder_carta_2.jpeg",
     "ver": false
 },
 
 {
     "nombre": "Carta",
     "imagen": "imagenes/placeholder_carta.jpeg",
+    "imagen2": "imagenes/placeholder_carta_2.jpeg",
     "ver": false
 },
 
 {
     "nombre": "Simbolo",
     "imagen": "imagenes/placeholder_simbolo.jpeg",
+    "imagen2": "imagenes/placeholder_carta_2.jpeg",
     "ver": false
 }, 
 
 {
     "nombre": "Esqueleto",
     "imagen":"imagenes/placeholder_esqueleto.jpeg",
+    "imagen2": "imagenes/placeholder_carta_2.jpeg",
     "ver": false
 }
 

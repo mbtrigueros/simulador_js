@@ -1,7 +1,11 @@
+// Pistas
+
+// declaro variables para los arrays de pistas. 
+
 const pistasTramoA = [];
 const pistasTramoB = [];
 
-// Pistas
+// agrego a los mismos las pistas desde una llamada asincronica con AJAX y JSON
 
 $.getJSON(URLJSON, function (datos, estado) {
 
@@ -11,12 +15,12 @@ pistasTramoA.push (new Herramienta(datos[7]));
 
 console.log(pistasTramoA);
 
-
 pistasTramoB.push (new Herramienta(datos[3]));
 pistasTramoB.push (new Herramienta(datos[4]));
 pistasTramoB.push (new Herramienta(datos[5]));
 
 console.log(pistasTramoB);
+
 })
 
 // Tramo Linterna
@@ -35,10 +39,14 @@ function terceraSituacionTramoA (){
     .callFunction(() => {
         oscurecerFondo(); })
     .start();
-    
+
+// genero las pistas  
+
 for (const pista of pistasTramoA){
     crearBoton(pista);
 }
+
+// asocio a las pistas un evento onclick para agregarlas al inventario y eliminarlas del espacio
 
 $.getJSON(URLJSON, function (datos, estado) {
 
@@ -57,6 +65,11 @@ camisa_btn.onclick = () => {
         crearElementos(inventario[4]);
     }
     console.log(inventario);
+    camisa_btn.parentNode.removeChild(camisa_btn);
+    let camisa_inventario = document.getElementById("camisa_li");
+    camisa_inventario.onclick = () => {
+        modalPista();
+        }
 
 }
 
@@ -75,6 +88,11 @@ simbolo_btn.onclick = () => {
         crearElementos(inventario[4]);
     }
     console.log(inventario);
+    simbolo_btn.parentNode.removeChild(simbolo_btn);
+    let simbolo_inventario = document.getElementById("simbolo_li");
+    simbolo_inventario.onclick = () => {
+        modalPista();
+        }
     }
 
 let esqueleto_btn = document.getElementById("esqueleto");
@@ -92,10 +110,16 @@ esqueleto_btn.onclick = () => {
         crearElementos(inventario[4]);
     }
     console.log(inventario);
+    esqueleto_btn.parentNode.removeChild(esqueleto_btn);
+    let esqueleto_inventario = document.getElementById("esqueleto_li");
+    esqueleto_inventario.onclick = () => {
+        modalPista();
+        }
     }
 
 })
 
+modalPista();
 } 
 
 // Tramo Cuchillo
@@ -113,7 +137,7 @@ function terceraSituacionTramoB (){
     .pauseFor(5000)
     .callFunction(() => {
         oscurecerFondo(); 
-        agregarElementoAlInventario();})
+        ;})
     .start();
     
 
@@ -139,6 +163,11 @@ function terceraSituacionTramoB (){
             crearElementos(inventario[4]);
         }
         console.log(inventario);
+        foto_btn.parentNode.removeChild(foto_btn);
+        let foto_inventario = document.getElementById("foto_li");
+        foto_inventario.onclick = () => {
+        modalPista();
+        }
 
     }
 
@@ -157,12 +186,16 @@ function terceraSituacionTramoB (){
             crearElementos(inventario[4]);
         }
         console.log(inventario);
+        carta_btn.parentNode.removeChild(carta_btn);
+        let carta_inventario = document.getElementById("carta_li");
+        carta_inventario.onclick = () => {
+            modalPista();
+            }
 
     }
 
     let camisa_btn = document.getElementById("camisa");
     camisa_btn.onclick = () => {
-        inventario.push( new Herramienta (datos[3]));
         if(inventario.length == 2){
             inventario.push( new Herramienta (datos[3]));
             crearElementos(inventario[2]);
@@ -176,10 +209,16 @@ function terceraSituacionTramoB (){
             crearElementos(inventario[4]);
         }
         console.log(inventario);
-
+        camisa_btn.parentNode.removeChild(camisa_btn);
+     let camisa_inventario = document.getElementById("camisa_li");
+     camisa_inventario.onclick = () => {
+        modalPista();
         }
+    }
 
     })
     
-    }
+
+
+}
 

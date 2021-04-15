@@ -28,7 +28,7 @@ const intro = new Typewriter('#introduccion', {
 });
 
         intro.typeString('Abrís los ojos... estás en una especie de bosque, te sentís desorientado. Está anocheciendo, y no te acordás nada de las últimas horas. Vas a tener que empezar a caminar, y buscar indicios que te ayuden a recordar lo que pasó... lo único que tenés con vos es tu mochila, con un celular sin batería.')
-                .pauseFor(5000)
+                .pauseFor(100)
                 .deleteAll(15)
                 .typeString('Estás caminando a través del bosque, mirando con atención, y al lado de un árbol encontrás tirados un cuchillo y una linterna. Dado el reducido espacio de tu mochila, solo podés agarrar uno...')
                 .callFunction(() => {

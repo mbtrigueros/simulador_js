@@ -37,6 +37,14 @@ textarea, input {
   background-color: #00ff22;
 }
 
+#simbolo_li, #esqueleto_li, #foto_li, #carta_li, #camisa_li, #celular_li, #linterna_li, #cuchillo_li {
+  animation: aparecer 2s 1 ease-in;
+}
+#contenedor_juego #esqueleto :hover, #contenedor_juego #foto :hover, #contenedor_juego #carta :hover, #contenedor_juego #simbolo :hover, #contenedor_juego #camisa :hover, #contenedor_juego #linterna :hover, #contenedor_juego #cuchillo :hover, #simbolo_li:hover, #esqueleto_li:hover, #foto_li:hover, #carta_li:hover, #camisa_li:hover, #celular_li:hover, #linterna_li:hover, #cuchillo_li:hover {
+  cursor: pointer;
+  border: solid whitesmoke 0.5px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -274,10 +282,6 @@ footer .footer__flex p ul .footer__iconos {
   width: 100px;
   height: 100px;
 }
-#contenedor_juego #cuchillo :hover {
-  cursor: pointer;
-  border: solid whitesmoke 1px;
-}
 #contenedor_juego #linterna {
   transition: ease-in 0.5s;
   animation: aparecer ease-in 2s 1;
@@ -286,19 +290,11 @@ footer .footer__flex p ul .footer__iconos {
   width: 100px;
   height: 100px;
 }
-#contenedor_juego #linterna :hover {
-  cursor: pointer;
-  border: 0.5px whitesmoke solid;
-}
 #contenedor_juego #camisa {
   transition: ease-in 0.5s;
   position: relative;
   right: 20%;
   top: 30%;
-}
-#contenedor_juego #camisa :hover {
-  cursor: pointer;
-  border: solid whitesmoke 0.5px;
 }
 #contenedor_juego #simbolo {
   transition: ease-in 0.5s;
@@ -306,19 +302,11 @@ footer .footer__flex p ul .footer__iconos {
   right: 10%;
   top: 50%;
 }
-#contenedor_juego #simbolo :hover {
-  cursor: pointer;
-  border: solid whitesmoke 0.5px;
-}
 #contenedor_juego #carta {
   transition: ease-in 0.5s;
   position: relative;
   right: 10%;
   top: 50%;
-}
-#contenedor_juego #carta :hover {
-  cursor: pointer;
-  border: solid whitesmoke 0.5px;
 }
 #contenedor_juego #foto {
   transition: ease-in 0.5s;
@@ -326,21 +314,12 @@ footer .footer__flex p ul .footer__iconos {
   right: 25%;
   top: 30%;
 }
-#contenedor_juego #foto :hover {
-  cursor: pointer;
-  border: solid whitesmoke 0.5px;
-}
 #contenedor_juego #esqueleto {
   transition: ease-in 0.5s;
   position: relative;
   right: 25%;
   top: 30%;
 }
-#contenedor_juego #esqueleto :hover {
-  cursor: pointer;
-  border: solid whitesmoke 0.5px;
-}
-
 #inventario_juego {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
@@ -373,30 +352,6 @@ footer .footer__flex p ul .footer__iconos {
 #p_camino:hover {
   cursor: pointer;
   opacity: 100%;
-}
-
-#cuchillo_li {
-  animation: aparecer 2s 1 ease-in;
-}
-#cuchillo_li:hover {
-  cursor: pointer;
-  border: solid whitesmoke 0.5px;
-}
-
-#linterna_li {
-  animation: aparecer 2s 1 ease-in;
-}
-#linterna_li:hover {
-  cursor: pointer;
-  border: solid whitesmoke 0.5px;
-}
-
-#celular_li {
-  animation: aparecer 2s 1 ease-in;
-}
-#celular_li:hover {
-  cursor: pointer;
-  border: solid whitesmoke 0.5px;
 }
 
 #img_pasto {
@@ -580,6 +535,10 @@ textarea:hover {
 }
 
 #modal-menu:target {
+  display: block;
+}
+
+#carta-modal:target {
   display: block;
 }
 

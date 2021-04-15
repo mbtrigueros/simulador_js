@@ -26,8 +26,7 @@
                 width: 100px;
                 height: 100px;
                 & :hover{
-                    cursor:pointer;
-                    border: solid whitesmoke 1px;
+                    @extend %hover_objetos;
                 }
             }
 
@@ -39,8 +38,7 @@
                 width: 100px;
                 height: 100px;
                 & :hover{
-                    cursor:pointer;
-                    border: 0.5px whitesmoke solid;
+                    @extend %hover_objetos;
                 }
             }
 
@@ -50,8 +48,7 @@
                 right: 20%;
                 top:30%;
                 & :hover{
-                    cursor:pointer;
-                    border: solid whitesmoke 0.5px;
+                    @extend %hover_objetos;
                 }
             }
             #simbolo{
@@ -60,8 +57,7 @@
                 right: 10%;
                 top:50%;
                 & :hover{
-                    cursor:pointer;
-                    border: solid whitesmoke 0.5px;
+                    @extend %hover_objetos;
                 }
             }
             #carta{
@@ -70,8 +66,7 @@
                 right: 10%;
                 top:50%;
                 & :hover{
-                    cursor:pointer;
-                    border: solid whitesmoke 0.5px;
+                    @extend %hover_objetos;
                 }
             }
             #foto{
@@ -80,8 +75,7 @@
                 right: 25%;
                 top:30%;
                 & :hover{
-                    cursor:pointer;
-                    border: solid whitesmoke 0.5px;
+                    @extend %hover_objetos;
                 }
             }
             #esqueleto{
@@ -90,8 +84,7 @@
                 right: 25%;
                 top:30%;
                 & :hover{
-                    cursor:pointer;
-                    border: solid whitesmoke 0.5px;
+                    @extend %hover_objetos;
                 }
             }
     }
@@ -103,6 +96,8 @@
         margin: 0.5%;
         z-index: 1;
     }
+
+// CAMINO
 
 #camino_div {
     cursor: pointer;
@@ -124,27 +119,7 @@
         opacity:100%; }
 }
 
-#cuchillo_li {
-    animation: aparecer 2s 1 ease-in;
-    &:hover {
-        cursor: pointer;
-        border: solid whitesmoke 0.5px;
-        }
-}
-#linterna_li {
-    animation: aparecer 2s 1 ease-in;
-    &:hover {
-        cursor: pointer;
-        border: solid whitesmoke 0.5px;
-    }
-}
-#celular_li {
-    animation: aparecer 2s 1 ease-in;
-    &:hover {
-        cursor: pointer;
-        border: solid whitesmoke 0.5px;
-    }
-}
+// PASTO
 
 #img_pasto {
     height: 10%;
@@ -168,6 +143,8 @@
     }
 }
 
+// TYPEWRITE TEXTOS
+
 #introduccion {
     margin: 5%;
 }
@@ -179,6 +156,36 @@
 #txt_tramoB {
     margin: 2%;
 }
+
+// OBJETOS DEL INVENTARIO
+
+#cuchillo_li {
+    @extend %objetos_inventario;
+}
+#linterna_li {
+    @extend %objetos_inventario;
+}
+#celular_li {
+    @extend %objetos_inventario;
+}
+#camisa_li {
+    @extend %objetos_inventario;
+}
+#carta_li {
+    @extend %objetos_inventario;
+}
+#foto_li {
+    @extend %objetos_inventario;
+}
+
+#esqueleto_li {
+    @extend %objetos_inventario;
+}
+#simbolo_li {
+    @extend %objetos_inventario;
+}
+
+
 
 
 // ANIMACIONES

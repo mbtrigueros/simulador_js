@@ -6,6 +6,7 @@ class Herramienta {
     constructor(datos){
         this.nombre = datos.nombre;
         this.imagen = datos.imagen;
+        this.imagen2 = datos.imagen2;
         this.uso = false;
         this.ver = false;
         this.bateria = parseInt(datos.bateria);

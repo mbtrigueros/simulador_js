@@ -7,8 +7,8 @@ function crearBoton(opcion){
     objeto.innerHTML = `<img src= ${opcion.imagen} alt= "Esto es un placeholder del ${opcion.nombre}">`;
     contenedorJuego.appendChild(objeto);
 }
-        
 
+        
 // Funcion para crear los elementos del inventario. 
 
 function crearElementos (elemento){

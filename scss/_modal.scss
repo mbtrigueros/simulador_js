@@ -17,8 +17,13 @@
     }
 }
 
+
 #modal-menu:target {
     display: block;
+}
+
+#carta-modal:target{
+    display:block;
 }
 
 .modal__cerrar {
