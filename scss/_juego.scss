@@ -185,6 +185,12 @@
     @extend %objetos_inventario;
 }
 
+// OJOS
+
+#ojos_div {
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
 
 
 

@@ -7,6 +7,7 @@ class Herramienta {
         this.nombre = datos.nombre;
         this.imagen = datos.imagen;
         this.imagen2 = datos.imagen2;
+        this.texto = datos.texto;
         this.uso = false;
         this.ver = false;
         this.bateria = parseInt(datos.bateria);
@@ -36,3 +37,4 @@ class Herramienta {
     }
     
 }
+

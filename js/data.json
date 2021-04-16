@@ -25,36 +25,41 @@
 {    
     "nombre": "Camisa",
     "imagen": "imagenes/placeholder_camisa.jpeg",
-    "imagen2": "imagenes/placeholder_carta_2.jpeg",
-    "ver": false
+    "imagen2": "imagenes/placeholder_camisa_2.jpeg",
+    "ver": false, 
+    "texto": "Esta es la camisa de tu pareja! Y está llena de sangre!"
 },
 
 {
     "nombre":"Foto",
     "imagen":"imagenes/placeholder_foto.jpeg",
-    "imagen2": "imagenes/placeholder_carta_2.jpeg",
-    "ver": false
+    "imagen2": "imagenes/placeholder_foto_2.jpeg",
+    "ver": false, 
+    "texto": "En esta foto se ven a vos y a tus compañeros en este bosque, años atrás"
 },
 
 {
     "nombre": "Carta",
     "imagen": "imagenes/placeholder_carta.jpeg",
     "imagen2": "imagenes/placeholder_carta_2.jpeg",
-    "ver": false
+    "ver": false,
+    "texto": "Que informacion podes sacar de esta carta?"
 },
 
 {
     "nombre": "Simbolo",
     "imagen": "imagenes/placeholder_simbolo.jpeg",
-    "imagen2": "imagenes/placeholder_carta_2.jpeg",
-    "ver": false
+    "imagen2": "imagenes/placeholder_simbolo_2.jpeg",
+    "ver": false,
+    "texto": "Recordas haber visto este simbolo antes... pareciera ser de una corporacion/religion"
 }, 
 
 {
     "nombre": "Esqueleto",
     "imagen":"imagenes/placeholder_esqueleto.jpeg",
-    "imagen2": "imagenes/placeholder_carta_2.jpeg",
-    "ver": false
+    "imagen2": "imagenes/placeholder_esqueleto_2.jpeg",
+    "ver": false,
+    "texto": "Esto parece ser un esqueleto humano... que miedo!!"
 }
 
 ]

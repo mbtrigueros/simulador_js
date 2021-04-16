@@ -27,6 +27,7 @@ console.log(pistasTramoB);
 
 function terceraSituacionTramoA (){
     
+    
     document.getElementById("contenedor_juego").style = `background-image: url(imagenes/placeholder_fondo3.jpeg);`
     contenedorJuego.innerHTML = `<div id = "txt_tramoA"></div>`;
 
@@ -37,7 +38,7 @@ function terceraSituacionTramoA (){
     texto_tramoA.typeString('No tenes alternativa, vas a tener que seguir por este camino... al menos tenes la linterna. Esta puede ser de gran ayuda a la hora de encontrar pistas, y que no te tomen por sorpresa...')
     .pauseFor(5000)
     .callFunction(() => {
-        oscurecerFondo(); })
+        oscurecerFondo();})
     .start();
 
 // genero las pistas  
@@ -47,7 +48,6 @@ for (const pista of pistasTramoA){
 }
 
 // asocio a las pistas un evento onclick para agregarlas al inventario y eliminarlas del espacio
-
 $.getJSON(URLJSON, function (datos, estado) {
 
 let camisa_btn = document.getElementById("camisa");
@@ -117,9 +117,11 @@ esqueleto_btn.onclick = () => {
         }
     }
 
+
 })
 
-modalPista();
+ojos();
+
 } 
 
 // Tramo Cuchillo
@@ -140,7 +142,7 @@ function terceraSituacionTramoB (){
         ;})
     .start();
     
-
+    setTimeout(enemigoAparece, 40000);
 
     for (const pista of pistasTramoB){
         crearBoton(pista); 
@@ -210,15 +212,14 @@ function terceraSituacionTramoB (){
         }
         console.log(inventario);
         camisa_btn.parentNode.removeChild(camisa_btn);
-     let camisa_inventario = document.getElementById("camisa_li");
-     camisa_inventario.onclick = () => {
-        modalPista();
-        }
+        let camisa_inventario = document.getElementById("camisa_li");
+        camisa_inventario.onclick = () => {
+            modalPista();
+            }
     }
 
     })
     
-
 
 }
 

@@ -8,6 +8,7 @@ function modalPista(){
                 modal.innerHTML = `<div class="fondo-modal" id="modal-menu">
                                     <div class= "modal">
                                     <img src= ${inventario[pista].imagen2}>
+                                    <p>${inventario[pista].texto}</p>
                                         </div>
                                         </div>`;
                 contenedorJuego.appendChild(modal);
@@ -15,10 +16,7 @@ function modalPista(){
                     inventario[pista].dejarDeMirar();
                     modal.parentNode.removeChild(modal);
                 }
-                
-
-                
+            }
         }
     }
-}
 }
