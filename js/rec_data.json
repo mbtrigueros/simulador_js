@@ -1,0 +1,35 @@
+[ {
+        "nombre": "Recuerdo1",
+        "imagen":"imagenes/placeholder_recuerdo.jpeg",
+        "texto": "Esto es un recuerdo"
+    },
+    
+    {
+        "nombre": "Recuerdo2",
+        "imagen":"imagenes/placeholder_recuerdo.jpeg",
+        "texto": "Esto es un recuerdo"
+    },
+    
+    {
+        "nombre": "Recuerdo3",
+        "imagen":"imagenes/placeholder_recuerdo.jpeg",
+        "texto": "Esto es un recuerdo"
+    },
+    
+    {
+        "nombre": "Recuerdo4",
+        "imagen":"imagenes/placeholder_recuerdo.jpeg",
+        "texto": "Esto es un recuerdo"
+    },
+    
+    {
+        "nombre": "Recuerdo5",
+        "imagen":"imagenes/placeholder_recuerdo.jpeg",
+        "texto": "Esto es un recuerdo"
+    },
+    
+    {
+        "nombre": "Recuerdo6",
+        "imagen":"imagenes/placeholder_recuerdo.jpeg",
+        "texto": "Esto es un recuerdo"
+    }]

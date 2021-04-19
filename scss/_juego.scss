@@ -1,8 +1,9 @@
 .grid__juego {
     height: 100vh;
-    @include grid(1fr, 0.5fr 70vh 0.5fr 0.5fr, 0.2%, 1%);
+    @include grid(1fr, 0.5fr 0.5fr 70vh 0.5fr 0.5fr, 0.2%, 1%);
     grid-template-areas:
         "header"
+        "recuerdos"
         "div"
         "inventario"
         "footer"; 
@@ -87,7 +88,39 @@
                     @extend %hover_objetos;
                 }
             }
+            #palo{
+                transition: ease-in 0.5s;
+                & :hover{
+                    @extend %hover_objetos;
+                }
+            }
+            #papel {
+                transition: ease-in 0.5s;
+                & :hover{
+                    @extend %hover_objetos;
+                }
+            }
+            
     }
+
+
+    #mensaje_palo{
+        visibility: hidden;
+    }
+
+    #mensaje_papel{
+        visibility: hidden;
+    }
+
+    #recuerdos_juego{
+        @include flex(row, space-evenly, center);
+        background-color: $colorFondo;
+        grid-area: recuerdos;
+        padding: 0.5%;
+        margin: 0.5%;
+        z-index: 1;
+    }
+
     #inventario_juego{
         @include flex(row, space-evenly, center);
         background-color: $colorFondo;
@@ -182,6 +215,14 @@
     @extend %objetos_inventario;
 }
 #simbolo_li {
+    @extend %objetos_inventario;
+}
+
+#palo_li {
+    @extend %objetos_inventario;
+}
+
+#papel_li {
     @extend %objetos_inventario;
 }
 

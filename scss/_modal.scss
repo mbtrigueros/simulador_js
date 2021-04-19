@@ -25,6 +25,38 @@
 #carta-modal:target{
     display:block;
 }
+#foto-modal:target{
+    display:block;
+}
+#camisa-modal:target{
+    display:block;
+}
+#simbolo-modal:target{
+    display:block;
+}
+#esqueleto-modal:target{
+    display:block;
+}
+
+#recuerdo1-modal:target{
+    display:block;
+}
+#recuerdo2-modal:target{
+    display:block;
+}
+#recuerdo3-modal:target{
+    display:block;
+}
+#recuerdo4-modal:target{
+    display:block;
+}
+#recuerdo5-modal:target{
+    display:block;
+}
+#recuerdo6-modal:target{
+    display:block;
+}
+
 
 .modal__cerrar {
     color: $colorDestacado;
@@ -34,3 +66,13 @@
     top: 0vh;
     right: 1%;
 }
+
+.modal__cerrar_2 {
+    color: $colorDestacado;
+    width: 6%;
+    height: auto;
+    position: absolute;
+    top: 0vh;
+    right: 1%;
+}
+

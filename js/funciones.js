@@ -20,6 +20,17 @@ function crearElementos (elemento){
     inventarioJuego.appendChild(objeto);
 }
 
+// Funcion para crear los recuerdos del personaje. 
+
+function crearRecuerdos (recuerdo){
+    let recuerdosJuego = document.getElementById("recuerdos_juego");
+    let objeto = document.createElement("li");
+    objeto.id = recuerdo.nombre.toLowerCase() + "_li"; 
+    objeto.innerHTML = `<img src= ${recuerdo.imagen} alt= "Esto es un placeholder del ${recuerdo.nombre}">
+                        `;
+    recuerdosJuego.appendChild(objeto);
+}
+
 // Funcion para crear las consecuencias.
 
 function crearConsecuencias (con){

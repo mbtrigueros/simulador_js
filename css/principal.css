@@ -37,10 +37,10 @@ textarea, input {
   background-color: #00ff22;
 }
 
-#simbolo_li, #esqueleto_li, #foto_li, #carta_li, #camisa_li, #celular_li, #linterna_li, #cuchillo_li {
+#papel_li, #palo_li, #simbolo_li, #esqueleto_li, #foto_li, #carta_li, #camisa_li, #celular_li, #linterna_li, #cuchillo_li {
   animation: aparecer 2s 1 ease-in;
 }
-#contenedor_juego #esqueleto :hover, #contenedor_juego #foto :hover, #contenedor_juego #carta :hover, #contenedor_juego #simbolo :hover, #contenedor_juego #camisa :hover, #contenedor_juego #linterna :hover, #contenedor_juego #cuchillo :hover, #simbolo_li:hover, #esqueleto_li:hover, #foto_li:hover, #carta_li:hover, #camisa_li:hover, #celular_li:hover, #linterna_li:hover, #cuchillo_li:hover {
+#contenedor_juego #papel :hover, #contenedor_juego #palo :hover, #contenedor_juego #esqueleto :hover, #contenedor_juego #foto :hover, #contenedor_juego #carta :hover, #contenedor_juego #simbolo :hover, #contenedor_juego #camisa :hover, #contenedor_juego #linterna :hover, #contenedor_juego #cuchillo :hover, #papel_li:hover, #palo_li:hover, #simbolo_li:hover, #esqueleto_li:hover, #foto_li:hover, #carta_li:hover, #camisa_li:hover, #celular_li:hover, #linterna_li:hover, #cuchillo_li:hover {
   cursor: pointer;
   border: solid whitesmoke 0.5px;
 }
@@ -164,7 +164,7 @@ header nav ul h1 {
 }
 
 footer {
-  -ms-grid-row: 7;
+  -ms-grid-row: 9;
   -ms-grid-column: 1;
   background-color: #0b090b;
   grid-area: footer;
@@ -256,14 +256,14 @@ footer .footer__flex p ul .footer__iconos {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.5fr 70vh 0.5fr 0.5fr;
+  grid-template-rows: 0.5fr 0.5fr 70vh 0.5fr 0.5fr;
   grid-row-gap: 0.2%;
   grid-column-gap: 1%;
-  grid-template-areas: "header" "div" "inventario" "footer";
+  grid-template-areas: "header" "recuerdos" "div" "inventario" "footer";
 }
 
 #contenedor_juego {
-  -ms-grid-row: 3;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
   height: 70vh;
   background-position: center;
@@ -320,8 +320,36 @@ footer .footer__flex p ul .footer__iconos {
   right: 25%;
   top: 30%;
 }
+#contenedor_juego #palo {
+  transition: ease-in 0.5s;
+}
+#contenedor_juego #papel {
+  transition: ease-in 0.5s;
+}
+#mensaje_palo {
+  visibility: hidden;
+}
+
+#mensaje_papel {
+  visibility: hidden;
+}
+
+#recuerdos_juego {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #0b090b;
+  grid-area: recuerdos;
+  padding: 0.5%;
+  margin: 0.5%;
+  z-index: 1;
+}
+
 #inventario_juego {
-  -ms-grid-row: 5;
+  -ms-grid-row: 7;
   -ms-grid-column: 1;
   display: flex;
   flex-direction: row;
@@ -547,7 +575,56 @@ textarea:hover {
   display: block;
 }
 
+#foto-modal:target {
+  display: block;
+}
+
+#camisa-modal:target {
+  display: block;
+}
+
+#simbolo-modal:target {
+  display: block;
+}
+
+#esqueleto-modal:target {
+  display: block;
+}
+
+#recuerdo1-modal:target {
+  display: block;
+}
+
+#recuerdo2-modal:target {
+  display: block;
+}
+
+#recuerdo3-modal:target {
+  display: block;
+}
+
+#recuerdo4-modal:target {
+  display: block;
+}
+
+#recuerdo5-modal:target {
+  display: block;
+}
+
+#recuerdo6-modal:target {
+  display: block;
+}
+
 .modal__cerrar {
+  color: #00ff22;
+  width: 6%;
+  height: auto;
+  position: absolute;
+  top: 0vh;
+  right: 1%;
+}
+
+.modal__cerrar_2 {
   color: #00ff22;
   width: 6%;
   height: auto;

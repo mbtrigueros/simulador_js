@@ -60,6 +60,22 @@
     "imagen2": "imagenes/placeholder_esqueleto_2.jpeg",
     "ver": false,
     "texto": "Esto parece ser un esqueleto humano... que miedo!!"
+},
+
+{
+    "nombre": "Palo",
+    "imagen": "imagenes/placeholder_palo.jpeg",
+    "imagen2": "imagenes/placeholder_palo_2.jpeg",
+    "ver": false,
+    "texto": "Este palo te va a venir bien si necesitas protegerte... pensa bien si es conveniente usarlo..."
+}, 
+
+{
+    "nombre": "Papel",
+    "imagen": "imagenes/placeholder_papel.jpeg",
+    "imagen2": "imagenes/placeholder_papel_2.jpeg",
+    "ver": false,
+    "texto": "Este papel contiene un mensaje amenazante... quien lo habra escrito? y por que?"
 }
 
 ]

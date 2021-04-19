@@ -3,6 +3,7 @@
 const opciones = [];
 const consecuencias = [];
 const inventario = [];
+const recuerdos = [];
 const contenedorJuego = document.getElementById("contenedor_juego");
 
     // llamada asincronica con AJAX

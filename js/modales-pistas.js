@@ -4,19 +4,36 @@ function modalPista(){
             inventario[pista].mirar();
             if (inventario[pista].ver == true){
                 let modal = document.createElement("div");
-                modal.id = inventario[pista].nombre.toLowerCase() + "-modal";
-                modal.innerHTML = `<div class="fondo-modal" id="modal-menu">
+                modal.innerHTML = `<div class="fondo-modal" id= ${inventario[pista].nombre.toLowerCase()}"-modal">
                                     <div class= "modal">
                                     <img src= ${inventario[pista].imagen2}>
                                     <p>${inventario[pista].texto}</p>
+                                    <img  class= "modal__cerrar" src= "cerrar.png" alt= "icono de cerrar">
                                         </div>
-                                        </div>`;
+                                        </div>
+                                        `;
                 contenedorJuego.appendChild(modal);
-                modal.ondblclick = () =>{
-                    inventario[pista].dejarDeMirar();
-                    modal.parentNode.removeChild(modal);
-                }
+                $(".modal__cerrar").click(function () { 
+                    modal.parentNode.removeChild(modal); 
+                });
             }
         }
     }
 }
+
+function modalRecuerdo(){
+    for ( recuerdo in recuerdos){
+                let recuerdoModal = document.createElement("div");
+                recuerdoModal.innerHTML = `<div class="fondo-modal" id= ${recuerdos[recuerdo].nombre.toLowerCase()}"-modal">
+                                    <div class= "modal">
+                                    <p>${recuerdos[recuerdo].texto}</p>
+                                    <img  class= "modal__cerrar_2" src= "cerrar.png" alt= "icono de cerrar">
+                                        </div>
+                                        </div>`;
+                contenedorJuego.appendChild(recuerdoModal);
+                $(".modal__cerrar_2").click(function () { 
+                    recuerdoModal.parentNode.removeChild(recuerdoModal); 
+                });
+                }
+            
+        }

@@ -1,5 +1,7 @@
 const URLJSON = "js/data.json";
 
+const URLJSON_2 = "js/rec_data.json";
+
 // Clase Herramienta
 
 class Herramienta {
@@ -38,3 +40,10 @@ class Herramienta {
     
 }
 
+class Recuerdo {
+    constructor(recdatos){
+        this.nombre = recdatos.nombre;
+        this.imagen = recdatos.imagen;
+        this.texto = recdatos.texto;
+}
+}
