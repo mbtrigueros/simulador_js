@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 h3, h4, h5, h6, h2, h1 {
-  color: #00ff22;
+  color: #fffdbd;
   font-family: "VT323", monospace;
   font-size: 2rem;
 }
 
 h1 {
-  color: #00ff22;
+  color: #fffdbd;
 }
 
 span, p {
-  color: white;
+  color: #fffdbd;
   font-size: 1.2rem;
   font-family: "VT323", monospace;
 }
@@ -18,8 +18,8 @@ span, p {
 textarea, input {
   font-family: "VT323", monospace;
   font-size: 1.3rem;
-  color: white;
-  border-color: #0b090b;
+  color: #fffdbd;
+  border-color: #34243b;
   border: 0.5%;
   border-style: solid;
   border-radius: 3%;
@@ -32,9 +32,9 @@ textarea, input {
   width: 300%;
   padding: 8%;
   margin: 2%;
-  color: #0b090b;
+  color: #34243b;
   text-transform: uppercase;
-  background-color: #00ff22;
+  background-color: #fffdbd;
 }
 
 #papel_li, #palo_li, #simbolo_li, #esqueleto_li, #foto_li, #carta_li, #camisa_li, #celular_li, #linterna_li, #cuchillo_li {
@@ -73,7 +73,7 @@ h2 {
 
 h3, h4, h5, h6 {
   font-size: 1.3rem;
-  margin: 3%;
+  margin: 1%;
   text-align: center;
 }
 
@@ -100,7 +100,7 @@ a {
 a:hover {
   opacity: 60%;
   text-decoration: none;
-  color: white;
+  color: #fffdbd;
 }
 
 img {
@@ -115,13 +115,13 @@ nav ul li {
   margin: 2%;
 }
 nav ul li a {
-  color: white;
+  color: #fffdbd;
   transition: opacity 0.5s;
 }
 nav ul li a:hover {
   opacity: 60%;
   text-decoration: none;
-  color: white;
+  color: #fffdbd;
 }
 
 .mb__header {
@@ -135,7 +135,7 @@ header {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #0b090b;
+  background-color: #34243b;
   height: auto;
   width: 100%;
   grid-area: header;
@@ -151,14 +151,14 @@ header nav ul {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  color: #0b090b;
+  color: #34243b;
   height: auto;
   width: 100%;
 }
 header nav ul h1 {
   margin: auto;
   font-size: 2rem;
-  color: #00ff22;
+  color: #fffdbd;
   font-family: "VT323", monospace;
   text-transform: uppercase;
 }
@@ -166,7 +166,7 @@ header nav ul h1 {
 footer {
   -ms-grid-row: 9;
   -ms-grid-column: 1;
-  background-color: #0b090b;
+  background-color: #34243b;
   grid-area: footer;
 }
 
@@ -230,26 +230,26 @@ footer .footer__flex p ul .footer__iconos {
 .grid__index .footer__index {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
-  background-color: #0b090b;
+  background-color: #34243b;
   height: 100%;
   grid-area: foot;
 }
 
 @keyframes color__titulo {
   0% {
-    color: #00ff22;
+    color: #fffdbd;
   }
   30% {
-    color: #0b090b;
+    color: #34243b;
   }
   50% {
-    color: white;
+    color: #fffdbd;
   }
   70% {
-    color: #0b090b;
+    color: #34243b;
   }
   100% {
-    color: #00ff22;
+    color: #fffdbd;
   }
 }
 .grid__juego {
@@ -269,7 +269,7 @@ footer .footer__flex p ul .footer__iconos {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #0b090b;
+  background-color: #34243b;
   background-image: url("/imagenes/placeholder_fondo.jpeg");
   filter: brightness(60%);
   grid-area: div;
@@ -341,7 +341,7 @@ footer .footer__flex p ul .footer__iconos {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #0b090b;
+  background-color: #34243b;
   grid-area: recuerdos;
   padding: 0.5%;
   margin: 0.5%;
@@ -355,7 +355,7 @@ footer .footer__flex p ul .footer__iconos {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #0b090b;
+  background-color: #34243b;
   grid-area: inventario;
   padding: 0.5%;
   margin: 0.5%;
@@ -417,8 +417,24 @@ footer .footer__flex p ul .footer__iconos {
 }
 
 #ojos_div {
+  display: none;
+  transition: 0.5s ease-in-out;
+}
+
+#ojos_img {
   opacity: 0;
   transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.boton {
+  opacity: 0;
+  font-family: "VT323", monospace;
+  padding: 2%;
+  margin: 2%;
+  color: #34243b;
+  text-transform: uppercase;
+  background-color: #fffdbd;
 }
 
 @keyframes oscurecerFondo {
@@ -451,6 +467,10 @@ footer .footer__flex p ul .footer__iconos {
   margin-right: 30%;
 }
 
+.contacto__titulo {
+  color: #34243b;
+}
+
 form {
   display: flex;
   margin-right: 60%;
@@ -466,27 +486,27 @@ fieldset {
 
 /* INPUT*/
 input {
-  background-color: #0b090b;
+  background-color: #34243b;
   position: relative;
   right: 30%;
   margin: 1%;
   transition: border-color 0.5s, transform 0.5s;
 }
 input:hover {
-  border-color: #00ff22;
+  border-color: #fffdbd;
   transform: scale(102%);
 }
 
 /* TEXTAREA*/
 textarea {
-  background-color: #0b090b;
+  background-color: #34243b;
   margin: 1%;
   position: relative;
   right: 30%;
   transition: border-color 0.5s, transform 0.5s;
 }
 textarea:hover {
-  border-color: #00ff22;
+  border-color: #fffdbd;
   transform: scale(102%);
 }
 
@@ -498,22 +518,22 @@ textarea:hover {
 }
 .formulario__boton:hover {
   cursor: pointer;
-  background-color: #0b090b;
-  color: #00ff22;
-  border-color: #00ff22;
+  background-color: #34243b;
+  color: #fffdbd;
+  border-color: #fffdbd;
   transform: scale(102%);
 }
 
 .imagen__contacto {
   max-width: 50%;
   border-radius: 50%;
-  border-color: #0b090b;
+  border-color: #34243b;
   border-style: solid;
   border: 0.5%;
   transition: border-color 0.3s, transform 0.3s;
 }
 .imagen__contacto:hover {
-  border-color: #00ff22;
+  border-color: #fffdbd;
   transform: scale(102%);
 }
 
@@ -530,7 +550,7 @@ textarea:hover {
   padding: 3%;
   margin: auto;
   border-radius: 2%;
-  box-shadow: 3px 5px 20px #00ff22;
+  box-shadow: 3px 5px 20px #34243b;
   width: 90%;
   transition: transform 0.5s;
 }
@@ -551,23 +571,35 @@ textarea:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #0b090b;
+  background-color: #34243b;
   position: fixed;
   max-width: 100%;
   height: 70vh;
 }
 .modal #partida_nueva {
   cursor: pointer;
-  color: white;
+  color: #fffdbd;
   font-size: 2rem;
 }
 .modal #cargar_partida {
   cursor: pointer;
-  color: white;
+  color: #fffdbd;
   font-size: 2rem;
 }
 
+.botones_flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 #modal-menu:target {
+  display: block;
+}
+
+#modal-enemigo:target {
   display: block;
 }
 
@@ -616,7 +648,7 @@ textarea:hover {
 }
 
 .modal__cerrar {
-  color: #00ff22;
+  color: #fffdbd;
   width: 6%;
   height: auto;
   position: absolute;
@@ -625,7 +657,7 @@ textarea:hover {
 }
 
 .modal__cerrar_2 {
-  color: #00ff22;
+  color: #fffdbd;
   width: 6%;
   height: auto;
   position: absolute;

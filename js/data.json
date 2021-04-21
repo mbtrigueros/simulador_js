@@ -65,9 +65,7 @@
 {
     "nombre": "Palo",
     "imagen": "imagenes/placeholder_palo.jpeg",
-    "imagen2": "imagenes/placeholder_palo_2.jpeg",
-    "ver": false,
-    "texto": "Este palo te va a venir bien si necesitas protegerte... pensa bien si es conveniente usarlo..."
+    "uso": false
 }, 
 
 {

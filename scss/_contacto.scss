@@ -11,6 +11,10 @@
     margin-right: 30%;
 }
 
+.contacto__titulo{
+    color: $colorFondo;
+}
+
 form {
     display: flex;
     margin-right: 60%; 
@@ -91,7 +95,7 @@ textarea {
     padding: 3%;
     margin:auto;
     border-radius: 2%;
-    box-shadow: 3px 5px 20px $colorTitulos;
+    box-shadow: 3px 5px 20px $colorFondo;
     width: 90%;
     transition: transform 0.5s;
     &:hover {

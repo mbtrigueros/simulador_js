@@ -2,10 +2,10 @@ function pantallaInicio (){
     contenedorJuego.innerHTML = `<div class="fondo-modal" id="modal-menu">
                                 <div class= "modal">
                                     <ul>
-                                        <li id= "partida_nueva">
+                                        <li class= "subtitulo" id= "partida_nueva">
                                         PARTIDA NUEVA
                                         </li>
-                                        <li id= "cargar_partida">
+                                        <li class= "subtitulo" id= "cargar_partida">
                                         CARGAR PARTIDA
                                         </li>
                                     </ul>

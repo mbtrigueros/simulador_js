@@ -228,11 +228,28 @@
 
 // OJOS
 
-#ojos_div {
-    opacity: 0;
+#ojos_div{
+    display: none;
     transition: 0.5s ease-in-out;
 }
 
+#ojos_img {
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+// BOTON
+
+.boton {
+    opacity: 0;
+    font-family: $fuenteTextos;
+    padding: 2%;
+    margin:2%;
+    color: $colorFondo;
+    text-transform: uppercase;
+    background-color: $colorDestacado;
+}
 
 
 // ANIMACIONES

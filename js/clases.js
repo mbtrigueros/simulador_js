@@ -2,6 +2,8 @@ const URLJSON = "js/data.json";
 
 const URLJSON_2 = "js/rec_data.json";
 
+const URLJSON_3 = "js/opciones.json";
+
 // Clase Herramienta
 
 class Herramienta {

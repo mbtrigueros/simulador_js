@@ -17,8 +17,19 @@
     }
 }
 
+.botones_flex {
+
+    @include flex(row, center, center);
+    width: 100%;
+
+
+}
 
 #modal-menu:target {
+    display: block;
+}
+
+#modal-enemigo:target {
     display: block;
 }
 
