@@ -1,5 +1,5 @@
 opcionesTramoA = ["HUIR", "ESCONDERSE", "HABLAR"];
-opcionesTramoB = ["HUIR", "HABLAR", "ATACAR"];
+opcionesTramoB = ["CORRER", "HABLAR", "ATACAR"];
 
 
 function enemigoAparece (){
@@ -10,9 +10,9 @@ function enemigoAparece (){
                                     <div class= "modal">
                                     <img id= "enemigo" src= "imagenes/placeholder_enemigo.jpeg" alt= "Esto es un placeholder del enemigo">
                                     <div class= "botones_flex">
-                                    <button class= "boton">${opcionesTramoB[0]}</button>
-                                    <button class= "boton">${opcionesTramoB[1]}</button>
-                                    <button class= "boton">${opcionesTramoB[2]}</button>
+                                    <button class= "boton" id= "${opcionesTramoB[0].toLowerCase()}">${opcionesTramoB[0]}</button>
+                                    <button class= "boton" id= "${opcionesTramoB[1].toLowerCase()}">${opcionesTramoB[1]}</button>
+                                    <button class= "boton" id= "${opcionesTramoB[2].toLowerCase()}">${opcionesTramoB[2]}</button>
                                     </div>
                                     </div>
                                     </div>
@@ -22,8 +22,8 @@ function enemigoAparece (){
                     <div class= "modal">
                     <img id= "enemigo" src= "imagenes/placeholder_enemigo.jpeg" alt= "Esto es un placeholder del enemigo">
                     <div class= "botones_flex">
-                    <button class= "boton">${opcionesTramoB[0]}</button>
-                    <button class= "boton">${opcionesTramoB[2]}</button>
+                    <button class= "boton" id= "${opcionesTramoB[0].toLowerCase()}">${opcionesTramoB[0]}</button>
+                    <button class= "boton" id= "${opcionesTramoB[2].toLowerCase()}">${opcionesTramoB[2]}</button>
                     </div>
                     </div>
                     </div>
@@ -33,7 +33,7 @@ function enemigoAparece (){
                         <div class= "modal">
                         <img id= "enemigo" src= "imagenes/placeholder_enemigo.jpeg" alt= "Esto es un placeholder del enemigo">
                         <div class= "botones_flex">
-                        <button class= "boton">${opcionesTramoB[0]}</button>
+                        <button class= "boton" id= "${opcionesTramoB[0].toLowerCase()}">${opcionesTramoB[0]}</button>
                         </div>
                         </div>
                         </div>
@@ -46,7 +46,10 @@ function enemigoAparece (){
                 document.getElementById("enemigo_div").style = "display: block";
 
                     $('.boton').css('opacity', '1');
-    
+                    
+                    opcionCorrer();
+                    opcionHablar2();
+                    opcionAtacar();
                                     }
 
 function ojos (){
@@ -56,22 +59,22 @@ function ojos (){
         if(inventario.length >= 4){
             ojosDiv.innerHTML = `<img id= "ojos_img" src= "imagenes/placeholder_ojos.gif" alt= "Esto es un placeholder de los ojos">
                             <div class= "botones_flex">
-                            <button class= "boton">${opcionesTramoA[0]}</button>
-                            <button class= "boton">${opcionesTramoA[1]}</button>
-                            <button class= "boton">${opcionesTramoA[2]}</button>
+                            <button class= "boton" id= "${opcionesTramoA[0].toLowerCase()}">${opcionesTramoA[0]}</button>
+                            <button class= "boton" id= "${opcionesTramoA[1].toLowerCase()}">${opcionesTramoA[1]}</button>
+                            <button class= "boton" id= "${opcionesTramoA[2].toLowerCase()}">${opcionesTramoA[2]}</button>
                             </div>`;
                         }
         else if (inventario.length == 3){
             ojosDiv.innerHTML = `<img id= "ojos_img" src= "imagenes/placeholder_ojos.gif" alt= "Esto es un placeholder de los ojos">
                                 <div class= "botones_flex">
-                                <button class= "boton">${opcionesTramoA[0]}</button>
-                                <button class= "boton">${opcionesTramoA[2]}</button>
+                                <button class= "boton" id= "${opcionesTramoA[0].toLowerCase()}">${opcionesTramoA[0]}</button>
+                                <button class= "boton" id= "${opcionesTramoA[2].toLowerCase()}">${opcionesTramoA[2]}</button>
                                 </div>`;
                             }
         else if (inventario.length == 2){
             ojosDiv.innerHTML = `<img id= "ojos_img" src= "imagenes/placeholder_ojos.gif" alt= "Esto es un placeholder de los ojos">
                                 <div class= "botones_flex">
-                                <button class= "boton">${opcionesTramoA[0]}</button>
+                                <button class= "boton" id= "${opcionesTramoA[0].toLowerCase()}">${opcionesTramoA[0]}</button>
                                 </div>`;
                             }
 
@@ -88,6 +91,9 @@ function ojos (){
                     localStorage.getItem("tramoA_sit3");    
                     $('.boton').css('opacity', '1');
                 }
+                opcionHuir();
+                opcionHabar();
+                opcionEsconderse();
             }
         else{
             document.getElementById("ojos_img").style = "opacity: 0";    

@@ -57,7 +57,7 @@ function terceraSituacionTramoB (){
         oscurecerFondo();})
     .start();
     
-    setTimeout(enemigoAparece, 40000);
+    setTimeout(enemigoAparece, 5000);
 
     for (const pista of pistasTramoB){
         crearBoton(pista); 

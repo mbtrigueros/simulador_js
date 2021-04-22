@@ -21,10 +21,12 @@ contenedorJuego.innerHTML = `<div id = "introduccion"></div>
                             <div id="camino_div">
                                 <p id= "p_camino"> Este camino se ve muy oscuro y peligroso...</p>
                             </div>
+                            </div>
                             `
 
 const intro = new Typewriter('#introduccion', {
     loop : false,
+    delay : 10 
 });
 
         intro.typeString('Abrís los ojos... estás en una especie de bosque, te sentís desorientado. Está anocheciendo, y no te acordás nada de las últimas horas. Vas a tener que empezar a caminar, y buscar indicios que te ayuden a recordar lo que pasó... lo único que tenés con vos es tu mochila, con un celular sin batería.')
@@ -38,6 +40,10 @@ const intro = new Typewriter('#introduccion', {
         
                     for (const opcion of opciones){
                         crearBoton(opcion);
+                    }
+
+                    onmousemove = e => {
+                        contenedorJuego.style = `transform: translateZ(${e.pageX}px);`;
                     }
         
                     eventoLinterna();

@@ -15,7 +15,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-color: $colorFondo;
-            background-image: url("/imagenes/placeholder_fondo.jpeg");
+            background-image: url("/imagenes/prueba.jpeg");
             filter: brightness(60%);
             grid-area: div;
 
@@ -262,4 +262,15 @@
 @keyframes aparecer {
     from{opacity: 0;}
     to{opacity: 1;}
+}
+
+// FONDO PRUEBA
+
+.fondo_1 {
+    position:relative;
+    top: -40%;
+    height: 70vh;
+    z-index: -1;
+    margin: 0 auto;
+    object-fit: cover;
 }

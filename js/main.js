@@ -1,10 +1,11 @@
 // Variables
 
 const opciones = [];
-const consecuencias = [];
+const volverAempezar = ["SI", "NO"];
 const inventario = [];
 const recuerdos = [];
 const contenedorJuego = document.getElementById("contenedor_juego");
+const contenedorOpciones = document.getElementById("opciones");
 
 // declaro variables para los arrays de pistas. 
 
@@ -30,6 +31,16 @@ pistasTramoB.push (new Herramienta(datos[9]));
 console.log(pistasTramoB);
 
 })
+
+// variables opciones 
+
+const opcionesTA_hablar = ["Bueno, dale", "Estas loco? Yo no quiero tomar nada"];
+const opcionesTB_hablar = ["Que alivio! Si, por favor, vamos a tu cabania...", "No, gracias, puedo encontrar solo mi camino..."];
+const opcionesTB2_hablar = ["IR", "NO IR"];
+const opcionesTA_esconderse = ["ATACAR", "INTERVENIR"];
+const opcionesTA2_esconderse = ["ESCAPAR", "INTERVENIR"];
+const opcionesTB_atacar = ["ATACAR IGUAL", "NO ATACAR"];
+const opcionesTB2_atacar = ["ATACAR", "HABLAR"];
 
 
     // llamada asincronica con AJAX

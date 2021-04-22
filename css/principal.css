@@ -270,7 +270,7 @@ footer .footer__flex p ul .footer__iconos {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #34243b;
-  background-image: url("/imagenes/placeholder_fondo.jpeg");
+  background-image: url("/imagenes/prueba.jpeg");
   filter: brightness(60%);
   grid-area: div;
 }
@@ -453,6 +453,15 @@ footer .footer__flex p ul .footer__iconos {
     opacity: 1;
   }
 }
+.fondo_1 {
+  position: relative;
+  top: -40%;
+  height: 70vh;
+  z-index: -1;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
 .grid__contacto {
   height: 100vh;
   display: grid;
