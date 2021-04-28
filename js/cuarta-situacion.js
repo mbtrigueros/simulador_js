@@ -121,7 +121,6 @@ function opcionEsconderse(){
     .callFunction(() => {
         if(inventario.find(elemento => elemento.nombre == "Palo")){
     
-    
             contenedorJuego.innerHTML = `
                                         <div id = "txt_tramoA_no_si"></div>
                                         <div class="fondo-modal">
@@ -173,8 +172,7 @@ function opcionEsconderse(){
         })
         .typeString('Queres otra oportunidad?')
         .start();
-        
-
+    
         }
 
         else {
@@ -182,6 +180,7 @@ function opcionEsconderse(){
     
             const texto_tramoAA_esconderse = new Typewriter('#txt_tramoAA_esconderse', {
                 loop : false,
+
             });
     
             texto_tramoAA_esconderse.typeString('Mejor idea va a ser esconderse, y seguirlos...')
@@ -190,27 +189,49 @@ function opcionEsconderse(){
             .typeString('Ves que se sacan unas mascaras... ¿¿¿¿¿¿¿¿SON ALIENS???????')
             .pauseFor(2000)
             .callFunction(() => {
-    
             contenedorJuego.innerHTML = `<div id = "txt_tramoAA_esconderse"></div>
                                         <div class="fondo-modal">
                                         <div class= "modal__">
                                         <img class= "imgs__" src= "imagenes/tramoA/aliens_1.png" alt= "aliens">
                                         </div>
                                         </div>
-                                        </div>  `;  
+                                        </div>  `;     
+            })
     
     
             const texto_tramoA2_si = new Typewriter('#txt_tramoA2_si', {
                 loop : false,
             });
+
         texto_tramoA2_si.typeString('Salis corriendo, pero sentis que algo te golpea por tu espalda, y ves un rayo de luz... ')
-        .start();
-    
-        }
-    
+        .callFunction(() => {
+            contenedorJuego.innerHTML = `
+            <img class= "imgs__" src= "imagenes/tramoA/aliensfin.png" alt= "aliens en primer plano">`;  })
+            .deleteAll(15)
+            .callFunction(() => {
+                oscurecerFondo();
+                })
+                .callFunction(() => {
+                    contenedorJuego.innerHTML = `<div id = "#txt_tramoA_no_no"></div>
+                                                <div class= "botones_flex">
+                                                <button class= "boton" id= "${volverAempezar[0].toLowerCase()}">${volverAempezar[0]}</button>
+                                                <a href= index.html> <img class= "modal__cerrar" src= "cerrar.png" alt= "icono de cerrar"></a>
+                                                </div>`;    
+                    $('.boton').css('opacity', '1');
+                    let btnSi = document.getElementById("si");
+                    btnSi.onclick = () => {
+                        guardadoJuego();
+                    }
+            })
+            
+            .typeString('Queres otra oportunidad?')
+            .start();
+            }
+        })
     .start();
-    
+        }
     }
+
     
 
 
@@ -218,36 +239,36 @@ function opcionEsconderse(){
 
 // OPCION CORRER
 
-function opcionCorrer (){
+// function opcionCorrer (){
 
-    let btn1 = document.getElementById("correr");
-    btn1.onclick = () => {
-        contenedorJuego.innerHTML = `<div id = "txt_tramoB_correr"></div>`;    
+//     let btn1 = document.getElementById("correr");
+//     btn1.onclick = () => {
+//         contenedorJuego.innerHTML = `<div id = "txt_tramoB_correr"></div>`;    
     
-    const texto_tramoB_correr = new Typewriter('#txt_tramoB_correr', {
-        loop : false,
-    });
+//     const texto_tramoB_correr = new Typewriter('#txt_tramoB_correr', {
+//         loop : false,
+//     });
 
-    texto_tramoB_correr.typeString('Te scuestran y moris')
-    .pauseFor(5000)
-    .deleteAll(15)
-    .typeString('Queres otra oportunidad?')
-    .callFunction(() => {
-        contenedorJuego.innerHTML = `<div id = "txt_tramoB_correr"></div>
-                                    <div class= "botones_flex">
-                                    <button class= "boton" id= "${volverAempezar[0].toLowerCase()}">${volverAempezar[0]}</button>
-                                    <a class = "boton" href = "index.html"><button class= "boton" id= "${volverAempezar[1].toLowerCase()}">${volverAempezar[1]}</button></a>
-                                    </div>`;    
-        $('.boton').css('opacity', '1');
-        let btnSi = document.getElementById("si");
-        btnSi.onclick = () => {
-            guardadoJuego();
-        }
+//     texto_tramoB_correr.typeString('Te scuestran y moris')
+//     .pauseFor(5000)
+//     .deleteAll(15)
+//     .typeString('Queres otra oportunidad?')
+//     .callFunction(() => {
+//         contenedorJuego.innerHTML = `<div id = "txt_tramoB_correr"></div>
+//                                     <div class= "botones_flex">
+//                                     <button class= "boton" id= "${volverAempezar[0].toLowerCase()}">${volverAempezar[0]}</button>
+//                                     <a class = "boton" href = "index.html"><button class= "boton" id= "${volverAempezar[1].toLowerCase()}">${volverAempezar[1]}</button></a>
+//                                     </div>`;    
+//         $('.boton').css('opacity', '1');
+//         let btnSi = document.getElementById("si");
+//         btnSi.onclick = () => {
+//             guardadoJuego();
+//         }
     
-    })
-    .start();
-    }
-}
+//     })
+//     .start();
+//     }
+// }
 
 // OPCION HABLAR2
 
@@ -370,117 +391,117 @@ texto_tramoB2_no.typeString('Mejor voy a buscar ayuda... ')
 
 // OPCION ATACAR
 
-function opcionAtacar(){
+// function opcionAtacar(){
     
-    let btn2 = document.getElementById("atacar");
-    btn2.onclick = () => {
-        contenedorJuego.innerHTML = `<div id = "txt_tramoB_atacar"></div>`;    
+//     let btn2 = document.getElementById("atacar");
+//     btn2.onclick = () => {
+//         contenedorJuego.innerHTML = `<div id = "txt_tramoB_atacar"></div>`;    
     
-    const texto_tramoB_atacar = new Typewriter('#txt_tramoB_atacar', {
-        loop : false,
-    });
+//     const texto_tramoB_atacar = new Typewriter('#txt_tramoB_atacar', {
+//         loop : false,
+//     });
     
-    texto_tramoB_atacar.typeString('Mejor acabar con esto, voy a agarrar el cuchillo...')
-    .pauseFor(5000)
-    .callFunction(() => {
-        if(inventario.find(elemento => elemento.nombre == "Papel")){
+//     texto_tramoB_atacar.typeString('Mejor acabar con esto, voy a agarrar el cuchillo...')
+//     .pauseFor(5000)
+//     .callFunction(() => {
+//         if(inventario.find(elemento => elemento.nombre == "Papel")){
     
     
-            contenedorJuego.innerHTML = `<div id = "txt_tramoBB_atacar"></div>`;    
+//             contenedorJuego.innerHTML = `<div id = "txt_tramoBB_atacar"></div>`;    
     
-            const texto_tramoBB_atacar = new Typewriter('#txt_tramoBB_atacar', {
-                loop : false,
-            });
+//             const texto_tramoBB_atacar = new Typewriter('#txt_tramoBB_atacar', {
+//                 loop : false,
+//             });
     
-            texto_tramoBB_atacar.typeString('NO!! No lo mates!!!!! Dijo, antes de caer muerto...')
-            .pauseFor(5000)
-            .deleteAll(15)
-            .typeString('Que haces?')
-            .pauseFor(2000)
-            .callFunction(() => {
+//             texto_tramoBB_atacar.typeString('NO!! No lo mates!!!!! Dijo, antes de caer muerto...')
+//             .pauseFor(5000)
+//             .deleteAll(15)
+//             .typeString('Que haces?')
+//             .pauseFor(2000)
+//             .callFunction(() => {
     
-            contenedorJuego.innerHTML = `<div id = "txt_tramoBB_atacar"></div>
-            <div class= "botones_flex">
-            <button class= "boton" id= "op1_TB_atacar">${opcionesTB_atacar[0]}</button>
-            <button class= "boton" id= "op2_TB_atacar">${opcionesTB_atacar[1]}</button>
-            </div>`;  
+//             contenedorJuego.innerHTML = `<div id = "txt_tramoBB_atacar"></div>
+//             <div class= "botones_flex">
+//             <button class= "boton" id= "op1_TB_atacar">${opcionesTB_atacar[0]}</button>
+//             <button class= "boton" id= "op2_TB_atacar">${opcionesTB_atacar[1]}</button>
+//             </div>`;  
     
-    $('.boton').css('opacity', '1'); 
+//     $('.boton').css('opacity', '1'); 
     
-    let btnop1 = document.getElementById("op1_TB_atacar");
-    btnop1.onclick = () => {
-            contenedorJuego.innerHTML = `<div id = "txt_tramoB_si"></div>`;    
+//     let btnop1 = document.getElementById("op1_TB_atacar");
+//     btnop1.onclick = () => {
+//             contenedorJuego.innerHTML = `<div id = "txt_tramoB_si"></div>`;    
     
-            const texto_tramoB_si = new Typewriter('#txt_tramoB_si', {
-                loop : false,
-            });
-    texto_tramoB_si.typeString('No... por favor no me mates... *RECUERDO* VOS SOS EL ASESINO, TE CAGO MATANDO FORRO')
+//             const texto_tramoB_si = new Typewriter('#txt_tramoB_si', {
+//                 loop : false,
+//             });
+//     texto_tramoB_si.typeString('No... por favor no me mates... *RECUERDO* VOS SOS EL ASESINO, TE CAGO MATANDO FORRO')
     
-    .start();
-        }
+//     .start();
+//         }
     
-    let btnop2 = document.getElementById("op2_TB_atacar");
-    btnop2.onclick = () => {
-            contenedorJuego.innerHTML = `<div id = "txt_tramoB_no"></div>`;    
+//     let btnop2 = document.getElementById("op2_TB_atacar");
+//     btnop2.onclick = () => {
+//             contenedorJuego.innerHTML = `<div id = "txt_tramoB_no"></div>`;    
     
-            const texto_tramoB_no = new Typewriter('#txt_tramoB_no', {
-                loop : false,
-            });
-    texto_tramoB_no.typeString('Seguime, tengo una idea de donde ir para salvarnos... *MENTIRA, TE VOY A MATAR ADIOS*')
-    .start();
-        }
-        })
-        .start();
-        }
-        else {
+//             const texto_tramoB_no = new Typewriter('#txt_tramoB_no', {
+//                 loop : false,
+//             });
+//     texto_tramoB_no.typeString('Seguime, tengo una idea de donde ir para salvarnos... *MENTIRA, TE VOY A MATAR ADIOS*')
+//     .start();
+//         }
+//         })
+//         .start();
+//         }
+//         else {
     
-            contenedorJuego.innerHTML = `<div id = "txt_tramoBB_atacar"></div>`;    
+//             contenedorJuego.innerHTML = `<div id = "txt_tramoBB_atacar"></div>`;    
     
-            const texto_tramoBB_atacar = new Typewriter('#txt_tramoBB_atacar', {
-                loop : false,
-            });
+//             const texto_tramoBB_atacar = new Typewriter('#txt_tramoBB_atacar', {
+//                 loop : false,
+//             });
     
-            texto_tramoBB_atacar.typeString('Agarras el cuchillo y lo matas, sin piedad...')
-            .pauseFor(5000)
-            .deleteAll(15)
-            .typeString('Salis corriendo, y ves a uno de tus amigos muertos... parece que llegaste demasiado tarde... aparece otra persona, empapada en sangre... sera peligroso?')
-            .pauseFor(2000)
-            .callFunction(() => {
+//             texto_tramoBB_atacar.typeString('Agarras el cuchillo y lo matas, sin piedad...')
+//             .pauseFor(5000)
+//             .deleteAll(15)
+//             .typeString('Salis corriendo, y ves a uno de tus amigos muertos... parece que llegaste demasiado tarde... aparece otra persona, empapada en sangre... sera peligroso?')
+//             .pauseFor(2000)
+//             .callFunction(() => {
     
-            contenedorJuego.innerHTML = `<div id = "txt_tramoBB_atacar"></div>
-            <div class= "botones_flex">
-            <button class= "boton" id= "op1_TB2_atacar">${opcionesTB2_atacar[0]}</button>
-            <button class= "boton" id= "op2_TB2_atacar">${opcionesTB2_atacar[1]}</button>
-            </div>`;  
+//             contenedorJuego.innerHTML = `<div id = "txt_tramoBB_atacar"></div>
+//             <div class= "botones_flex">
+//             <button class= "boton" id= "op1_TB2_atacar">${opcionesTB2_atacar[0]}</button>
+//             <button class= "boton" id= "op2_TB2_atacar">${opcionesTB2_atacar[1]}</button>
+//             </div>`;  
     
-        $('.boton').css('opacity', '1'); 
+//         $('.boton').css('opacity', '1'); 
     
-    let btnop1_2 = document.getElementById("op1_TB2_atacar");
-    btnop1_2.onclick = () => {
-            contenedorJuego.innerHTML = `<div id = "txt_tramoB2_si"></div>`;    
+//     let btnop1_2 = document.getElementById("op1_TB2_atacar");
+//     btnop1_2.onclick = () => {
+//             contenedorJuego.innerHTML = `<div id = "txt_tramoB2_si"></div>`;    
     
-            const texto_tramoB2_si = new Typewriter('#txt_tramoB2_si', {
-                loop : false,
-            });
-    texto_tramoB2_si.typeString('Lo matas, ya totalmente desenfrenado y asustado... ves a otro de tus amigos, quien te mira con temor... TE CONVERTISTE EN UN ASESINOOOOOOO')
-    .start();
+//             const texto_tramoB2_si = new Typewriter('#txt_tramoB2_si', {
+//                 loop : false,
+//             });
+//     texto_tramoB2_si.typeString('Lo matas, ya totalmente desenfrenado y asustado... ves a otro de tus amigos, quien te mira con temor... TE CONVERTISTE EN UN ASESINOOOOOOO')
+//     .start();
     
-        }
+//         }
     
-    let btnop2_2 = document.getElementById("op2_TB2_atacar");
-    btnop2_2.onclick = () => {
-            contenedorJuego.innerHTML = `<div id = "txt_tramoB2_no"></div>`;    
+//     let btnop2_2 = document.getElementById("op2_TB2_atacar");
+//     btnop2_2.onclick = () => {
+//             contenedorJuego.innerHTML = `<div id = "txt_tramoB2_no"></div>`;    
     
-            const texto_tramoB2_no = new Typewriter('#txt_tramoB2_no', {
-                loop : false,
-            });
-    texto_tramoB2_no.typeString('Me estan persiguiendo!!!!!!!! - Ah, trank, ya mate al asesino... SURPRISE MATASTE AL EQUIVOCADO, ACA ESTOY')
-        .start(); 
-    }
-    })
-    .start(); 
-    }
-        })
-    .start();
-    }
-    }
+//             const texto_tramoB2_no = new Typewriter('#txt_tramoB2_no', {
+//                 loop : false,
+//             });
+//     texto_tramoB2_no.typeString('Me estan persiguiendo!!!!!!!! - Ah, trank, ya mate al asesino... SURPRISE MATASTE AL EQUIVOCADO, ACA ESTOY')
+//         .start(); 
+//     }
+//     })
+//     .start(); 
+//     }
+//         })
+//     .start();
+//     }
+//     }
