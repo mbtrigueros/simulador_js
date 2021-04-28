@@ -73,13 +73,20 @@ function crearRecuerdos (recuerdo){
     });
 }
 
-// Funcion para oscurecer paulatinamente el fondo.
+// Funcion para oscurecer paulatinamente el fondo y visceversa
 
 function oscurecerFondo (){
         onmousemove = e => {
         document.getElementById("contenedor_juego").style.animation = "fondo 5s ease-in forwards";
     }
 }
+
+function oscurecerFondo (){
+    onmousemove = e => {
+    document.getElementById("contenedor_juego").style.animation = "fondo_2 2s ease-in forwards";
+}
+}
+
 
 // Funciones tercera situacion 
 
@@ -256,6 +263,7 @@ function agregarCamisaInventario(){
         inventario.push( new Herramienta (datos[3])); 
         crearElementos(inventario[2]);
         recuerdos.push(new Recuerdo (recdatos[0]));
+        crearRecuerdos(recuerdos[0]);
     }
     else if(inventario.length == 3){
         inventario.push( new Herramienta (datos[3]));
@@ -440,8 +448,6 @@ function agregarPapelInventario(){
             papelMensaje.style = `visibility: hidden`;
         }
     }
-
-    modalPista();
 
     let papel_inventario = document.getElementById("papel_li");
     papel_inventario.onclick = () => {

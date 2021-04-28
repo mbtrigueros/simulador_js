@@ -46,9 +46,8 @@ function enemigoAparece (){
 
                     $('.boton').css('opacity', '1');
                     
-                    opcionCorrer();
-                    opcionHablar2();
-                    opcionAtacar();
+                    // opcionHablar2();
+                    // opcionAtacar();
                                     }
 
 function ojos (){

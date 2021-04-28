@@ -439,6 +439,98 @@ footer .footer__flex p ul .footer__iconos {
   margin: 2%;
 }
 
+#txt_tramoA_hablar {
+  margin: 2%;
+}
+
+#txt_tramoA_si_no {
+  margin: 2%;
+}
+
+#txt_tramoA_no_si {
+  margin: 2%;
+}
+
+#txt_tramoA_no_no {
+  margin: 2%;
+}
+
+#txt_tramoA_esconderse {
+  margin: 2%;
+}
+
+#txt_tramoAA_esconderse {
+  margin: 2%;
+}
+
+#txt_tramoA_si {
+  margin: 2%;
+}
+
+#txt_tramoAA_esconderse {
+  margin: 2%;
+}
+
+#txt_tramoA2_si {
+  margin: 2%;
+}
+
+#txt_tramoB_hablar {
+  margin: 2%;
+}
+
+#txt_tramoBB_hablar {
+  margin: 2%;
+}
+
+#txt_tramoB_si {
+  margin: 2%;
+}
+
+#txt_tramoB_no {
+  margin: 2%;
+}
+
+#txt_tramoBB_hablar {
+  margin: 2%;
+}
+
+#txt_tramoB2_si {
+  margin: 2%;
+}
+
+#txt_tramoB2_no {
+  margin: 2%;
+}
+
+#txt_tramoB_atacar {
+  margin: 2%;
+}
+
+#txt_tramoBB_atacar {
+  margin: 2%;
+}
+
+#txt_tramoB_si {
+  margin: 2%;
+}
+
+#txt_tramoB_no {
+  margin: 2%;
+}
+
+#txt_tramoBB_atacar {
+  margin: 2%;
+}
+
+#txt_tramoB2_si {
+  margin: 2%;
+}
+
+#txt_tramoB2_no {
+  margin: 2%;
+}
+
 #ojos_div {
   position: absolute;
   right: 71%;
@@ -476,20 +568,20 @@ footer .footer__flex p ul .footer__iconos {
     opacity: 1;
   }
 }
-@keyframes blur {
-  from {
-    filter: blur(100%);
-  }
-  to {
-    filter: blur(0%);
-  }
-}
 @keyframes fondo {
   from {
     background-color: #0f181400;
   }
   to {
     background-color: #0f1814;
+  }
+}
+@keyframes fondo_2 {
+  from {
+    background-color: #0f1814;
+  }
+  to {
+    background-color: #0f181400;
   }
 }
 @keyframes vibrar {
