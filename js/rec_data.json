@@ -1,35 +1,35 @@
 [ {
         "nombre": "Recuerdo1",
         "imagen":"imagenes/recuerdos.gif",
-        "texto": "Esto es un recuerdo"
+        "texto": "Vine con mi pareja a un retiro espiritual en este bosque... para trabajar mis problemas de ira..."
     },
     
     {
         "nombre": "Recuerdo2",
         "imagen":"imagenes/recuerdos.gif",
-        "texto": "Esto es un recuerdo"
+        "texto": "Nos acogieron unos miembros de una congregacion, los cuales se veían raros pero amables..."
     },
     
     {
         "nombre": "Recuerdo3",
         "imagen":"imagenes/recuerdos.gif",
-        "texto": "Esto es un recuerdo"
+        "texto": "Nos fuimos a dar una caminata con mi pareja y uno de los miembros de la comunidad, eso es lo último que recuerdo..."
     },
     
     {
         "nombre": "Recuerdo4",
         "imagen":"imagenes/recuerdos.gif",
-        "texto": "Esto es un recuerdo"
+        "texto": "Años atrás, hubo un grave accidente... no quisimos hacerlo... pero ella..."
     },
     
     {
         "nombre": "Recuerdo5",
         "imagen":"imagenes/recuerdos.gif",
-        "texto": "Esto es un recuerdo"
+        "texto": "Luego de un suceso años atrás, nuestro amigo no pudo más... por eso estamos acá, en este campamento tanto tiempo después..."
     },
     
     {
         "nombre": "Recuerdo6",
         "imagen":"imagenes/recuerdos.gif",
-        "texto": "Esto es un recuerdo"
+        "texto": "Vinimos con mis amigos a nuestro viejo campamento, para conmemorar un aniversario..."
     }]
