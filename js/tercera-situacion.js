@@ -2,9 +2,10 @@
 // Tramo Linterna
 
 function terceraSituacionTramoA (){
+
     
     
-    document.getElementById("contenedor_juego").style = `background-image: url(imagenes/placeholder_fondo3.jpeg);`
+    document.getElementById("contenedor_juego").style = `background-image: url(imagenes/fondo_escenaLinterna.png);`
     contenedorJuego.innerHTML = `<div id = "txt_tramoA"></div>`;
 
     const texto_tramoA = new Typewriter('#txt_tramoA', {
@@ -14,7 +15,8 @@ function terceraSituacionTramoA (){
     texto_tramoA.typeString('No tenes alternativa, vas a tener que seguir por este camino... al menos tenes la linterna. Esta puede ser de gran ayuda a la hora de encontrar pistas, y que no te tomen por sorpresa...')
     .pauseFor(5000)
     .callFunction(() => {
-        oscurecerFondo();})
+        // oscurecerFondo();
+    })
     .start();
 
     setTimeout(ojos, 6000);
@@ -44,7 +46,8 @@ $.getJSON(URLJSON, function (datos, estado) {
 
 function terceraSituacionTramoB (){
 
-    document.getElementById("contenedor_juego").style = `background-image: url(imagenes/placeholder_fondo3.jpeg);`
+
+    document.getElementById("contenedor_juego").style = `background-image: url(imagenes/fondo_escenaCuchillo.png);`
     contenedorJuego.innerHTML = `<div id = "txt_tramoB"></div>`;
 
     const texto_tramoB = new Typewriter('#txt_tramoB', {
@@ -54,7 +57,7 @@ function terceraSituacionTramoB (){
     texto_tramoB.typeString('Lograste cortar la maleza, ahora toca avanzar. Seria conveniente buscar pistas que te ayuden a recordar, al menos mientras puedes ver!')
     .pauseFor(5000)
     .callFunction(() => {
-        oscurecerFondo();})
+})
     .start();
     
     setTimeout(enemigoAparece, 5000);

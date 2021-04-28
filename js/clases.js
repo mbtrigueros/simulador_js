@@ -10,6 +10,7 @@ class Herramienta {
     constructor(datos){
         this.nombre = datos.nombre;
         this.imagen = datos.imagen;
+        this.imagenInventario = datos.imagenInventario;
         this.imagen2 = datos.imagen2;
         this.texto = datos.texto;
         this.uso = false;

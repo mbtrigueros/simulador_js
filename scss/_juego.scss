@@ -15,11 +15,14 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-color: $colorFondo;
-            background-image: url("/imagenes/prueba.jpeg");
-            filter: brightness(60%);
+            background-image: url("/imagenes/fondo_escena1.png");
+            background-blend-mode: soft-light;
+            background-color: #0f181400;
             grid-area: div;
 
             #cuchillo{
+                width: 100px;
+                height: 100px;
                 transition: ease-in 0.5s;
                 animation: aparecer ease-in 2s 1;
                 position: relative;
@@ -32,6 +35,8 @@
             }
 
             #linterna{
+                width: 100px;
+                height: 100px;
                 transition: ease-in 0.5s;
                 animation: aparecer ease-in 2s 1;
                 position: relative;
@@ -44,58 +49,89 @@
             }
 
             #camisa{
+                width: 100px;
+                height: 100px;
                 transition: ease-in 0.5s;
-                position:relative;
-                right: 20%;
-                top:30%;
+                position: absolute;
+                z-index: 0;
+                left: -1.7%;
+                filter: brightness(15%) opacity(80%);
+                top: 60%;
+                transform: rotate(-20deg);
                 & :hover{
                     @extend %hover_objetos;
                 }
             }
             #simbolo{
+                width: 100px;
+                height: 100px;
                 transition: ease-in 0.5s;
-                position:relative;
-                right: 10%;
-                top:50%;
+                position: absolute;
+                filter: brightness(15%) opacity(25%);
+                left: 5.5%;
                 & :hover{
                     @extend %hover_objetos;
                 }
             }
             #carta{
+                width: 70px;
+                height: 70px;
                 transition: ease-in 0.5s;
-                position:relative;
-                right: 10%;
-                top:50%;
+                position: absolute;
+                filter: brightness(15%);
+                position: absolute;
+                transform: rotate(45deg);
+                bottom: 35%;
+                right: 0.5%;  
                 & :hover{
                     @extend %hover_objetos;
                 }
             }
             #foto{
+                width: 80px;
+                height: 80px;
                 transition: ease-in 0.5s;
-                position:relative;
-                right: 25%;
-                top:30%;
+                position: absolute;
+                filter: brightness(15%);
+                transform: rotate(-25deg);
+                top: 25%;
+                left: 5%;            
                 & :hover{
                     @extend %hover_objetos;
                 }
             }
             #esqueleto{
+                width: 100px;
+                height: 100px;
                 transition: ease-in 0.5s;
-                position:relative;
-                right: 25%;
-                top:30%;
+                position: absolute;
+                filter: brightness(15%) opacity(70%);
+                right: 2%;
+                top: 55%;
                 & :hover{
                     @extend %hover_objetos;
                 }
             }
             #palo{
+                width: 150px;
+                height: 150px;
                 transition: ease-in 0.5s;
+                position: absolute;
+                filter: brightness(15%) opacity(70%);
+                right: 31%;
+                top: 54%;
                 & :hover{
                     @extend %hover_objetos;
                 }
             }
             #papel {
+                width: 70px;
+                height: 70px;
                 transition: ease-in 0.5s;
+                filter: brightness(15%);
+                position: absolute;
+                top: 55%;
+                right: 22%; 
                 & :hover{
                     @extend %hover_objetos;
                 }
@@ -132,21 +168,14 @@
 
 // CAMINO
 
-#camino_div {
-    cursor: pointer;
-    background-color:black;
-    width: 150px;
-    height: 200px;
-    position:absolute;
-    top:51%;
-    right: 0%;
-
-}
 
 #p_camino {
     opacity: 0%;
     transition: 1.5s;
-    z-index: -1;
+    position: absolute;
+    left: 10%;
+    top: 80%;
+    z-index: 1;
     &:hover {
         cursor: pointer;
         opacity:100%; }
@@ -154,26 +183,23 @@
 
 // PASTO
 
-#img_pasto {
-    height: 10%;
-    width: 110%;
-    position: absolute;
-    margin: 1%;
-    right: -1%;
-    top: 87%;
-    z-index: -1;
-}
 
 #p_pasto {
     position: absolute;
     opacity: 0%;
-    right: 28%;
-    top: 85%;
+    right: 10%;
+    top: 75%;
     transition: 1.5s;
     &:hover {
         cursor: pointer;
         opacity:100%;
     }
+}
+
+// ENEMIGO
+
+#enemigo {
+    animation: vibrar ease-in-out infinite .1s alternate;
 }
 
 // TYPEWRITE TEXTOS
@@ -226,9 +252,16 @@
     @extend %objetos_inventario;
 }
 
+.recuerdos {
+    @extend %objetos_inventario;
+}
+
 // OJOS
 
 #ojos_div{
+    position: absolute;
+    right: 71%;
+    top: 60%;
     display: none;
     transition: 0.5s ease-in-out;
 }
@@ -252,25 +285,32 @@
 }
 
 
-// ANIMACIONES
+// IMAGENES TRAMO A
 
-@keyframes oscurecerFondo {
-    from {filter: brightness(60%);}
-    to {filter: brightness(5%);}
+.imgs__{
+    transition: 0.5s ease-in-out;
+    animation: aparecer 3s 1 ease-in;
 }
+
+
+// ANIMACIONES
 
 @keyframes aparecer {
     from{opacity: 0;}
     to{opacity: 1;}
 }
 
-// FONDO PRUEBA
+@keyframes blur {
+    from{filter: blur(100%);}
+    to{filter: blur(0%);}
+}
 
-.fondo_1 {
-    position:relative;
-    top: -40%;
-    height: 70vh;
-    z-index: -1;
-    margin: 0 auto;
-    object-fit: cover;
+@keyframes fondo {
+    from{background-color: #0f181400;}
+    to {background-color: #0f1814;}
+}
+
+@keyframes vibrar {
+    from{transform: translate(-5px);}
+    to{transform: translate(5px);}
 }

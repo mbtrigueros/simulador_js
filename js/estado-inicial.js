@@ -14,13 +14,6 @@ $.getJSON(URLJSON, function (datos, estado) {
 // INTRODUCCION
 
 contenedorJuego.innerHTML = `<div id = "introduccion"></div>
-                            <div>
-                                <img id= "img_pasto" src= "imagenes/placeholder_pasto.jpeg"  alt= "Esto es un placeholder del pasto">
-                                <p id= "p_pasto">Si tan solo tuvieras algo con que cortar esta maleza...</p>
-                            </div>
-                            <div id="camino_div">
-                                <p id= "p_camino"> Este camino se ve muy oscuro y peligroso...</p>
-                            </div>
                             </div>
                             `
 
@@ -41,16 +34,13 @@ const intro = new Typewriter('#introduccion', {
                     for (const opcion of opciones){
                         crearBoton(opcion);
                     }
-
-                    onmousemove = e => {
-                        contenedorJuego.style = `transform: translateZ(${e.pageX}px);`;
-                    }
         
                     eventoLinterna();
         
                     eventoCuchillo();
                 
                     guardadoJuego();
+                    
                 })
                 .start();
 

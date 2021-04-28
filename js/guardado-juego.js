@@ -5,83 +5,114 @@ function guardadoJuego (){
             let clave = localStorage.key(i);
             console.log(clave);
             switch (clave){
-                case "linterna": 
-                // contenedorJuego.innerHTML = `<div>
-                //                 <img id= "img_pasto" src= "imagenes/placeholder_pasto.jpeg"  alt= "Esto es un placeholder del pasto">
-                //                 <p id= "p_pasto">Si tan solo tuvieras algo con que cortar esta maleza...</p>
-                //                 </div>
-                //                 <div id="camino_div">
-                //                 <p id= p_camino> Este camino se ve muy oscuro y peligroso...</p>
-                //                 </div>`;
-                                
-                                // llamada asincrocina con AJAX
-                                $.getJSON(URLJSON, function (datos, estado) {
 
-                                inventario.push(new Herramienta (datos[1]));
-                                crearElementos(inventario[1]);
-                                console.log(inventario);
-                                // segundaSituacion();
-                                usarLinterna();
+                case "linterna":
 
-                            })
+                 // llamada asincrocina con AJAX
+                $.getJSON(URLJSON, function (datos, estado) {
 
-                break;
+                    inventario.push(new Herramienta (datos[1]));
+                    crearElementos(inventario[1]);
+                    console.log(inventario);
+                    usarLinterna();
 
-                case "cuchillo":
-                    // contenedorJuego.innerHTML = `<div>
-                    //             <img id= "img_pasto" src= "imagenes/placeholder_pasto.jpeg"  alt= "Esto es un placeholder del pasto">
-                    //             <p id= "p_pasto">Si tan solo tuvieras algo con que cortar esta maleza...</p>
-                    //             </div>
-                    //             <div id="camino_div">
-                    //             <p id= "p_camino"> Este camino se ve muy oscuro y peligroso...</p>
-                    //             </div>`;    
-
-                                // llamada asincrocina con AJAX
-                                $.getJSON(URLJSON, function (datos, estado) {
-
-                                    inventario.push(new Herramienta (datos[2]));
-                                    crearElementos(inventario[1]);
-                                    console.log(inventario);
-                                    usarCuchillo();
-
-                                })
-                break;
-
-                case "tramoA":
+                })
+                
+                    document.getElementById("contenedor_juego").style = `background-image: url(imagenes/fondo_escenaLinterna.png);`;
                     contenedorJuego.innerHTML = `<div id = "txt_tramoA"></div>`;
-
-                    document.getElementById("contenedor_juego").style = `background-image: url(imagenes/placeholder_fondo3.jpeg);`;
                     for (const pista of pistasTramoA){
                         crearBoton(pista); 
                     }
-                        terceraSituacionTramoA();
                         crearCamisa();
                         crearSimbolo();
                         crearEsqueleto();
                         crearPalo();
+                        setTimeout(ojos, 1000);
                     break;
 
-                case "tramoB":
-                    contenedorJuego.innerHTML = `<div id = "txt_tramoB"></div>`;
+                case "cuchillo":
 
-                    document.getElementById("contenedor_juego").style = `background-image: url(imagenes/placeholder_fondo3.jpeg);`;
+                // llamada asincrocina con AJAX
+                $.getJSON(URLJSON, function (datos, estado) {
+
+                    inventario.push(new Herramienta (datos[2]));
+                    crearElementos(inventario[1]);
+                    console.log(inventario);
+                    usarCuchillo();
+
+                                })
+                    document.getElementById("contenedor_juego").style = `background-image: url(imagenes/fondo_escenaCuchillo.png);`;
+                    contenedorJuego.innerHTML = `<div id = "txt_tramoB"></div>`;
                     for (const pista of pistasTramoB){
                         crearBoton(pista); 
                     }
-                        terceraSituacionTramoB();
                         crearFoto();
                         crearCarta();
                         crearCamisa2();
                         crearPapel();
+                        setTimeout(enemigoAparece, 1000);
+                    break;
+
+                case "camisa":
+                                    // llamada asincrocina con AJAX
+                $.getJSON(URLJSON, function (datos, estado) {
+                    agregarCamisaInventario();
+                })
+                    break;
+
+                case "simbolo":
+                                // llamada asincrocina con AJAX
+                                $.getJSON(URLJSON, function (datos, estado) {
+                    agregarSimboloInventario();
+                                })
+                    break;
+                case "esqueleto":
+                                    // llamada asincrocina con AJAX
+                $.getJSON(URLJSON, function (datos, estado) {
+                    agregarEsqueletoInventario();
+                })
+                    break;
+                case "palo":
+                                    // llamada asincrocina con AJAX
+                $.getJSON(URLJSON, function (datos, estado) {
+                    agregarPaloInventario();
+                })
+                    break;
+
+                case "papel":
+                                    // llamada asincrocina con AJAX
+                $.getJSON(URLJSON, function (datos, estado) {
+                    agregarPapelInventario();
+                })
+                    break;
+                
+                
+                case "camisa_2":
+                                    // llamada asincrocina con AJAX
+                $.getJSON(URLJSON, function (datos, estado) {
+                    agregarCamisa2Inventario();
+                })
+                    break;
+                case "foto":
+                                    // llamada asincrocina con AJAX
+                $.getJSON(URLJSON, function (datos, estado) {
+                    agregarFotoInventario();
+
+                })
+                    break;
+                case "carta":
+                                    // llamada asincrocina con AJAX
+                $.getJSON(URLJSON, function (datos, estado) {
+                    agregarCartaInventario();
+                })
                     break;
 
                 case "tramoA_sit3":
-                    ojos();
+                    document.getElementById("contenedor_juego").style = `background-image: url(imagenes/fondo_escenaLinterna.png);`;
                     break;
 
                 case "tramoB_sit3":
-                    
-                    enemigoAparece();
+                    document.getElementById("contenedor_juego").style = `background-image: url(imagenes/fondo_escenaCuchillo.png);`;
                     break;
 
                 default: 

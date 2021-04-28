@@ -1,7 +1,5 @@
 // Variables
 
-const opciones = [];
-const volverAempezar = ["SI", "NO"];
 const inventario = [];
 const recuerdos = [];
 const contenedorJuego = document.getElementById("contenedor_juego");
@@ -34,6 +32,8 @@ console.log(pistasTramoB);
 
 // variables opciones 
 
+const opciones = [];
+const volverAempezar = ["SI"];
 const opcionesTA_hablar = ["Bueno, dale", "Estas loco? Yo no quiero tomar nada"];
 const opcionesTB_hablar = ["Que alivio! Si, por favor, vamos a tu cabania...", "No, gracias, puedo encontrar solo mi camino..."];
 const opcionesTB2_hablar = ["IR", "NO IR"];

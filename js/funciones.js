@@ -4,7 +4,7 @@
 function crearBoton(opcion){
     let objeto = document.createElement("div");
     objeto.id = opcion.nombre.toLowerCase(); 
-    objeto.innerHTML = `<img src= ${opcion.imagen} alt= "Esto es un placeholder del ${opcion.nombre}">`;
+    objeto.innerHTML = `<img src= ${opcion.imagen} alt= "Imagen correspondiente a ${opcion.nombre}">`;
     contenedorJuego.appendChild(objeto);
 }
 
@@ -24,9 +24,26 @@ function crearElementos (elemento){
     let inventarioJuego = document.getElementById("inventario_juego");
     let objeto = document.createElement("li");
     objeto.id = elemento.nombre.toLowerCase() + "_li"; 
-    objeto.innerHTML = `<img src= ${elemento.imagen} alt= "Esto es un placeholder del ${elemento.nombre}">
+    objeto.innerHTML = `<img src= ${elemento.imagenInventario} alt= "Imagen correspondiente a ${elemento.nombre}">
                         `;
     inventarioJuego.appendChild(objeto);
+
+    let modal = document.createElement("div");
+    modal.id = elemento.nombre.toLowerCase() + "-modal";
+    modal.innerHTML = `<div class="fondo-modal" id= ${elemento.nombre.toLowerCase()}"-modal">
+                        <div class= "modal__">
+                        <img src= ${elemento.imagen2}>
+                        <p>${elemento.texto}</p>
+                        <img  class= "modal__cerrar" src= "cerrar.png" alt= "icono de cerrar">
+                            </div>
+                            </div>
+                            `;
+    modal.style = "display: none";
+    contenedorJuego.appendChild(modal);
+    $(".modal__cerrar").click(function () { 
+        modal.style = "display: none";
+    });
+
 }
 
 // Funcion para crear los recuerdos del personaje. 
@@ -34,17 +51,33 @@ function crearElementos (elemento){
 function crearRecuerdos (recuerdo){
     let recuerdosJuego = document.getElementById("recuerdos_juego");
     let objeto = document.createElement("li");
+    objeto.className = "recuerdos";
     objeto.id = recuerdo.nombre.toLowerCase() + "_li"; 
-    objeto.innerHTML = `<img src= ${recuerdo.imagen} alt= "Esto es un placeholder del ${recuerdo.nombre}">
+    objeto.innerHTML = `<img src= ${recuerdo.imagen} alt= "Imagen correspondiente a ${recuerdo.nombre}">
                         `;
     recuerdosJuego.appendChild(objeto);
+
+    let recuerdoModal = document.createElement("div");
+    recuerdoModal.id = recuerdo.nombre.toLowerCase() + "-modal";
+    recuerdoModal.innerHTML = `<div class="fondo-modal" id= ${recuerdo.nombre.toLowerCase()}"-modal">
+                        <div class= "modal__">
+                        <p>${recuerdo.texto}</p>
+                        <img  class= "modal__cerrar_2" src= "cerrar.png" alt= "icono de cerrar">
+                            </div>
+                            </div>`;
+
+    recuerdoModal.style = "display:none";
+    contenedorJuego.appendChild(recuerdoModal);
+    $(".modal__cerrar_2").click(function () { 
+        recuerdoModal.style = "display: none";
+    });
 }
 
 // Funcion para oscurecer paulatinamente el fondo.
 
 function oscurecerFondo (){
         onmousemove = e => {
-        document.getElementById("contenedor_juego").style.animation = "oscurecerFondo 5s ease-in forwards";
+        document.getElementById("contenedor_juego").style.animation = "fondo 5s ease-in forwards";
     }
 }
 
@@ -62,8 +95,6 @@ function crearCamisa(){
     localStorage.setItem("camisa", "Camisa");
     localStorage.getItem("camisa");      
 
-    localStorage.setItem("recuerdo1", "Recuerdo 1");
-    localStorage.getItem("recuerdo1");
 
     console.log(inventario);
     camisa_btn.parentNode.removeChild(camisa_btn);
@@ -83,8 +114,6 @@ function crearSimbolo(){
     localStorage.setItem("simbolo", "Simbolo");
     localStorage.getItem("simbolo");
 
-    localStorage.setItem("recuerdo2", "Recuerdo 2");
-    localStorage.getItem("recuerdo2");
 
     simbolo_btn.parentNode.removeChild(simbolo_btn);
 
@@ -103,8 +132,6 @@ function crearEsqueleto(){
     localStorage.setItem("esqueleto", "Esqueleto");
     localStorage.getItem("esqueleto");
 
-    localStorage.setItem("recuerdo3", "Recuerdo 3");
-    localStorage.getItem("recuerdo3");
     
     esqueleto_btn.parentNode.removeChild(esqueleto_btn);
 
@@ -117,6 +144,12 @@ function crearPalo(){
 
 
     let palo_btn = document.getElementById("palo");
+    
+    let mensaje = document.createElement("p");
+    mensaje.id = "mensaje_palo";
+    mensaje.innerText = `Para que querrias un palo ahora...?`;
+    palo_btn.appendChild(mensaje);
+
     palo_btn.onclick = () => {
 
     agregarPaloInventario();
@@ -137,6 +170,10 @@ function crearPalo(){
 function crearPapel(){
 
     let papel_btn = document.getElementById("papel");
+    let mensaje = document.createElement("p");
+    mensaje.id = "mensaje_papel";
+    mensaje.innerText = `Este papel no pareciera tener mayor importancia... tal vez tenga mas sentido tomarlo luego...`;
+    papel_btn.appendChild(mensaje);
 
     papel_btn.onclick = () => {
 
@@ -164,9 +201,6 @@ function crearCamisa2 (){
         localStorage.setItem("camisa_2", "Camisa, tramo B");
         localStorage.getItem("camisa_2");
 
-        localStorage.setItem("recuerdo6", "Recuerdo 6");
-        localStorage.getItem("recuerdo6");
-
         camisa_btn.parentNode.removeChild(camisa_btn);
         
     }
@@ -185,8 +219,6 @@ function crearCarta (){
         localStorage.setItem("carta", "Carta");
         localStorage.getItem("carta");
     
-        localStorage.setItem("recuerdo5", "Recuerdo 5");
-        localStorage.getItem("recuerdo5");
     
         carta_btn.parentNode.removeChild(carta_btn);
         
@@ -204,9 +236,6 @@ function crearFoto(){
 
         localStorage.setItem("foto", "Foto");
         localStorage.getItem("foto");
-
-        localStorage.setItem("recuerdo4", "Recuerdo 4");
-        localStorage.getItem("recuerdo4");
 
         console.log(inventario);
         foto_btn.parentNode.removeChild(foto_btn);
@@ -227,7 +256,6 @@ function agregarCamisaInventario(){
         inventario.push( new Herramienta (datos[3])); 
         crearElementos(inventario[2]);
         recuerdos.push(new Recuerdo (recdatos[0]));
-        crearRecuerdos(recuerdos[0]);
     }
     else if(inventario.length == 3){
         inventario.push( new Herramienta (datos[3]));
@@ -242,13 +270,16 @@ function agregarCamisaInventario(){
         crearRecuerdos(recuerdos[2]);
     }
 
+
     let camisa_inventario = document.getElementById("camisa_li");
     camisa_inventario.onclick = () => {
-        modalPista();
+        let modal = document.getElementById("camisa-modal");
+        modal.style = "display: block";
         }
         let recuerdo1 = document.getElementById("recuerdo1_li");
         recuerdo1.onclick = () => {
-            modalRecuerdo();
+            let modal = document.getElementById("recuerdo1-modal");
+            modal.style = "display: block";
         }
 
     })
@@ -275,20 +306,23 @@ function agregarSimboloInventario(){
     }
     else{
         inventario.push( new Herramienta (datos[6]));
-        crearElementos(inventario[4]);
+        crearElementos(inventario[4]); 
         recuerdos.push(new Recuerdo (recdatos[1]));
         crearRecuerdos(recuerdos[2]);
     }
     console.log(inventario);
 
+
     let simbolo_inventario = document.getElementById("simbolo_li");
     simbolo_inventario.onclick = () => {
-        modalPista();
+        let modal = document.getElementById("simbolo-modal");
+        modal.style = "display: block";
         }
         
     let recuerdo2 = document.getElementById("recuerdo2_li");
     recuerdo2.onclick = () => {
-        modalRecuerdo();
+        let modal = document.getElementById("recuerdo2-modal");
+        modal.style = "display: block";
         }
 
         
@@ -316,21 +350,24 @@ function agregarEsqueletoInventario(){
     }
     else {
         inventario.push( new Herramienta (datos[7]));
-        crearElementos(inventario[4]);
+        crearElementos(inventario[4]); 
         recuerdos.push(new Recuerdo (recdatos[2]));
         crearRecuerdos(recuerdos[2]);
     }
 
     console.log(inventario);
 
+
     let esqueleto_inventario = document.getElementById("esqueleto_li");
     esqueleto_inventario.onclick = () => {
-        modalPista();
+        let modal = document.getElementById("esqueleto-modal");
+        modal.style = "display: block";
         }
 
     let recuerdo3 = document.getElementById("recuerdo3_li");
     recuerdo3.onclick = () => {
-        modalRecuerdo();
+        let modal = document.getElementById("recuerdo3-modal");
+        modal.style = "display: block";
         }
 
     })
@@ -345,19 +382,16 @@ function agregarPaloInventario(){
         $.getJSON(URLJSON_2, function (recdatos, estado) {
 
     let palo_btn = document.getElementById("palo");
-    let mensaje = document.createElement("p");
-    mensaje.id = "mensaje_palo";
-    mensaje.innerText = `Para que querrias un palo ahora...?`;
-    palo_btn.appendChild(mensaje);
+    let mensajePalo = document.getElementById("mensaje_palo");
 
     if(inventario.length == 5){
         inventario.push( new Herramienta (datos[8]));
         crearElementos(inventario[5]);
         palo_btn.parentNode.removeChild(palo_btn); }
         else{
-            mensaje.style = `visibility: visible`;
+            mensajePalo.style = `visibility: visible`;
             palo_btn.onmouseout = () => {
-                mensaje.style = `visibility: hidden`;
+                mensajePalo.style = `visibility: hidden`;
             }
         }
 
@@ -393,10 +427,7 @@ function agregarPapelInventario(){
         $.getJSON(URLJSON_2, function (recdatos, estado) {
     
     let papel_btn = document.getElementById("papel");
-    let mensaje = document.createElement("p");
-    mensaje.id = "mensaje_papel";
-    mensaje.innerText = `Este papel no pareciera tener mayor importancia... tal vez tenga mas sentido tomarlo luego...`;
-    papel_btn.appendChild(mensaje);
+    let papelMensaje = document.getElementById("mensaje_papel");
 
     if(inventario.length == 5){
         inventario.push( new Herramienta (datos[9]));
@@ -404,15 +435,18 @@ function agregarPapelInventario(){
         papel_btn.parentNode.removeChild(papel_btn);
     }
     else {
-        mensaje.style = `visibility: visible`;
+        papelMensaje.style = `visibility: visible`;
         papel_btn.onmouseout = () => {
-            mensaje.style = `visibility: hidden`;
+            papelMensaje.style = `visibility: hidden`;
         }
     }
 
+    modalPista();
+
     let papel_inventario = document.getElementById("papel_li");
     papel_inventario.onclick = () => {
-        modalPista();
+        let modal = document.getElementById("papel-modal");
+        modal.style = "display: block";
         
         }
 
@@ -447,12 +481,14 @@ function agregarCamisa2Inventario(){
 
     let camisa_inventario = document.getElementById("camisa_li");
     camisa_inventario.onclick = () => {
-        modalPista();
+        let modal = document.getElementById("camisa-modal");
+        modal.style = "display: block";
         }
     
     let recuerdo6 = document.getElementById("recuerdo6_li");
     recuerdo6.onclick = () => {
-        modalRecuerdo();
+        let modal = document.getElementById("recuerdo6-modal");
+        modal.style = "display: block";
         }
 
     })
@@ -475,7 +511,7 @@ function agregarCartaInventario(){
     }
     else if(inventario.length == 3){
         inventario.push( new Herramienta (datos[5]));
-        crearElementos(inventario[3]);
+        crearElementos(inventario[3]); 
         recuerdos.push(new Recuerdo (recdatos[4]));
         crearRecuerdos(recuerdos[1]);
     }
@@ -488,15 +524,16 @@ function agregarCartaInventario(){
 
     console.log(inventario);
 
-
     let carta_inventario = document.getElementById("carta_li");
     carta_inventario.onclick = () => {
-        modalPista();
+        let modal = document.getElementById("carta-modal");
+        modal.style = "display: block";
         }
     
     let recuerdo5 = document.getElementById("recuerdo5_li");
     recuerdo5.onclick = () => {
-        modalRecuerdo();
+        let modal = document.getElementById("recuerdo5-modal");
+        modal.style = "display: block";
         }
 
     })
@@ -523,19 +560,21 @@ function agregarFotoInventario(){
     }
     else {
         inventario.push( new Herramienta (datos[4]));
-        crearElementos(inventario[4]);
+        crearElementos(inventario[4]); 
         recuerdos.push(new Recuerdo (recdatos[3]));
         crearRecuerdos(recuerdos[2]);
     }
 
     let foto_inventario = document.getElementById("foto_li");
     foto_inventario.onclick = () => {
-        modalPista();
+        let modal = document.getElementById("foto-modal");
+        modal.style = "display: block";
     }
     
     let recuerdo4 = document.getElementById("recuerdo4_li");
     recuerdo4.onclick = () => {
-        modalRecuerdo();
+        let modal = document.getElementById("recuerdo4-modal");
+        modal.style = "display: block";
     }
 
 })

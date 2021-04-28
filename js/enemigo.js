@@ -1,5 +1,5 @@
-opcionesTramoA = ["HUIR", "ESCONDERSE", "HABLAR"];
-opcionesTramoB = ["CORRER", "HABLAR", "ATACAR"];
+opcionesTramoA = ["ESCONDERSE", "HABLAR"];
+opcionesTramoB = ["HABLAR", "ATACAR"];
 
 
 function enemigoAparece (){
@@ -7,31 +7,30 @@ function enemigoAparece (){
                 enemigo.id = "enemigo_div";
                 if(inventario.length >= 4){
                 enemigo.innerHTML = `<div class="fondo-modal" id="modal-enemigo">
-                                    <div class= "modal">
-                                    <img id= "enemigo" src= "imagenes/placeholder_enemigo.jpeg" alt= "Esto es un placeholder del enemigo">
+                                    <div class= "modal__">
+                                    <img id= "enemigo" src= "imagenes/enemigo.png" alt= "Esto es un placeholder del enemigo">
                                     <div class= "botones_flex">
                                     <button class= "boton" id= "${opcionesTramoB[0].toLowerCase()}">${opcionesTramoB[0]}</button>
                                     <button class= "boton" id= "${opcionesTramoB[1].toLowerCase()}">${opcionesTramoB[1]}</button>
-                                    <button class= "boton" id= "${opcionesTramoB[2].toLowerCase()}">${opcionesTramoB[2]}</button>
                                     </div>
                                     </div>
                                     </div>
                         `;      }
                 else if(inventario.length == 3){
                     enemigo.innerHTML = `<div class="fondo-modal" id="modal-enemigo">
-                    <div class= "modal">
-                    <img id= "enemigo" src= "imagenes/placeholder_enemigo.jpeg" alt= "Esto es un placeholder del enemigo">
+                    <div class= "modal__">
+                    <img id= "enemigo" src= "imagenes/enemigo.png" alt= "Esto es un placeholder del enemigo">
                     <div class= "botones_flex">
                     <button class= "boton" id= "${opcionesTramoB[0].toLowerCase()}">${opcionesTramoB[0]}</button>
-                    <button class= "boton" id= "${opcionesTramoB[2].toLowerCase()}">${opcionesTramoB[2]}</button>
+                    <button class= "boton" id= "${opcionesTramoB[1].toLowerCase()}">${opcionesTramoB[2]}</button>
                     </div>
                     </div>
                     </div>
         `;  }
                     else  {
                         enemigo.innerHTML = `<div class="fondo-modal" id="modal-enemigo">
-                        <div class= "modal">
-                        <img id= "enemigo" src= "imagenes/placeholder_enemigo.jpeg" alt= "Esto es un placeholder del enemigo">
+                        <div class= "modal__">
+                        <img id= "enemigo" src= "imagenes/enemigo.png" alt= "Esto es un placeholder del enemigo">
                         <div class= "botones_flex">
                         <button class= "boton" id= "${opcionesTramoB[0].toLowerCase()}">${opcionesTramoB[0]}</button>
                         </div>
@@ -39,10 +38,10 @@ function enemigoAparece (){
                         </div>
             `;  
                     }
-                contenedorJuego.appendChild(enemigo);
                 localStorage.setItem("tramoB_sit3", "Situacion 3, tramo B");
-                localStorage.getItem("tramoB_sit3");    
+                localStorage.getItem("tramoB_sit3"); 
                 
+                contenedorJuego.appendChild(enemigo);
                 document.getElementById("enemigo_div").style = "display: block";
 
                     $('.boton').css('opacity', '1');
@@ -57,24 +56,23 @@ function ojos (){
     let ojosDiv = document.createElement("div");
         ojosDiv.id = "ojos_div";
         if(inventario.length >= 4){
-            ojosDiv.innerHTML = `<img id= "ojos_img" src= "imagenes/placeholder_ojos.gif" alt= "Esto es un placeholder de los ojos">
+            ojosDiv.innerHTML = `<img id= "ojos_img" src= "imagenes/ojos.gif" alt= "Esto es un placeholder de los ojos">
                             <div class= "botones_flex">
                             <button class= "boton" id= "${opcionesTramoA[0].toLowerCase()}">${opcionesTramoA[0]}</button>
                             <button class= "boton" id= "${opcionesTramoA[1].toLowerCase()}">${opcionesTramoA[1]}</button>
-                            <button class= "boton" id= "${opcionesTramoA[2].toLowerCase()}">${opcionesTramoA[2]}</button>
                             </div>`;
                         }
         else if (inventario.length == 3){
-            ojosDiv.innerHTML = `<img id= "ojos_img" src= "imagenes/placeholder_ojos.gif" alt= "Esto es un placeholder de los ojos">
+            ojosDiv.innerHTML = `<img id= "ojos_img" src= "imagenes/ojos.gif" alt= "Esto es un placeholder de los ojos">
                                 <div class= "botones_flex">
                                 <button class= "boton" id= "${opcionesTramoA[0].toLowerCase()}">${opcionesTramoA[0]}</button>
-                                <button class= "boton" id= "${opcionesTramoA[2].toLowerCase()}">${opcionesTramoA[2]}</button>
+                                <button class= "boton" id= "${opcionesTramoA[1].toLowerCase()}">${opcionesTramoA[2]}</button>
                                 </div>`;
                             }
         else if (inventario.length == 2){
-            ojosDiv.innerHTML = `<img id= "ojos_img" src= "imagenes/placeholder_ojos.gif" alt= "Esto es un placeholder de los ojos">
+            ojosDiv.innerHTML = `<img id= "ojos_img" src= "imagenes/ojos.gif" alt= "Esto es un placeholder de los ojos">
                                 <div class= "botones_flex">
-                                <button class= "boton" id= "${opcionesTramoA[0].toLowerCase()}">${opcionesTramoA[0]}</button>
+                                <button class= "boton" id= "${opcionesTramoA[1].toLowerCase()}">${opcionesTramoA[0]}</button>
                                 </div>`;
                             }
 
@@ -91,7 +89,6 @@ function ojos (){
                     localStorage.getItem("tramoA_sit3");    
                     $('.boton').css('opacity', '1');
                 }
-                opcionHuir();
                 opcionHabar();
                 opcionEsconderse();
             }

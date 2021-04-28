@@ -4,74 +4,83 @@
 
     {
     "nombre": "Celular",
-    "imagen": "imagenes/placeholder_elemento3.jpeg",
+    "imagenInventario": "imagenes/celular.png",
     "bateria": 0,
     "uso": false
 },
 
 {
     "nombre": "Linterna",
-    "imagen": "imagenes/placeholder_elemento2.jpeg",
+    "imagen": "imagenes/linterna.png",
+    "imagenInventario": "imagenes/linternaLi.png",
     "bateria": 10000,
     "uso": false
 },
 
 {
     "nombre": "Cuchillo",
-    "imagen": "imagenes/placeholder_elemento.jpeg",
+    "imagen": "imagenes/cuchillo.png",
+    "imagenInventario": "imagenes/CuchilloLi.png",
     "uso": false
 },
 
 {    
     "nombre": "Camisa",
-    "imagen": "imagenes/placeholder_camisa.jpeg",
-    "imagen2": "imagenes/placeholder_camisa_2.jpeg",
+    "imagen": "imagenes/camisa.png",
+    "imagenInventario": "imagenes/camisaLi.png",
+    "imagen2": "imagenes/camisa_2.png",
     "ver": false, 
     "texto": "Esta es la camisa de tu pareja! Y está llena de sangre!"
 },
 
 {
     "nombre":"Foto",
-    "imagen":"imagenes/placeholder_foto.jpeg",
-    "imagen2": "imagenes/placeholder_foto_2.jpeg",
+    "imagen":"imagenes/foto.png",
+    "imagenInventario": "imagenes/fotoLi.png",
+    "imagen2": "imagenes/foto_2.png",
     "ver": false, 
     "texto": "En esta foto se ven a vos y a tus compañeros en este bosque, años atrás"
 },
 
 {
     "nombre": "Carta",
-    "imagen": "imagenes/placeholder_carta.jpeg",
-    "imagen2": "imagenes/placeholder_carta_2.jpeg",
+    "imagen": "imagenes/carta.png",
+    "imagenInventario": "imagenes/cartaLi.png",
+    "imagen2": "imagenes/carta_2.png",
     "ver": false,
     "texto": "Que informacion podes sacar de esta carta?"
 },
 
 {
     "nombre": "Simbolo",
-    "imagen": "imagenes/placeholder_simbolo.jpeg",
-    "imagen2": "imagenes/placeholder_simbolo_2.jpeg",
+    "imagen": "imagenes/simbolo.png",
+    "imagenInventario": "imagenes/simboloLi.png",
+    "imagen2": "imagenes/simbolo_2.png",
     "ver": false,
     "texto": "Recordas haber visto este simbolo antes... pareciera ser de una corporacion/religion"
 }, 
 
 {
     "nombre": "Esqueleto",
-    "imagen":"imagenes/placeholder_esqueleto.jpeg",
-    "imagen2": "imagenes/placeholder_esqueleto_2.jpeg",
+    "imagen":"imagenes/esqueleto.png",
+    "imagenInventario": "imagenes/esqueletoLi.png",
+    "imagen2": "imagenes/esqueleto_2.png",
     "ver": false,
     "texto": "Esto parece ser un esqueleto humano... que miedo!!"
 },
 
 {
     "nombre": "Palo",
-    "imagen": "imagenes/placeholder_palo.jpeg",
+    "imagen": "imagenes/palo.png",
+    "imagenInventario": "imagenes/paloLi.png",
     "uso": false
 }, 
 
 {
     "nombre": "Papel",
-    "imagen": "imagenes/placeholder_papel.jpeg",
-    "imagen2": "imagenes/placeholder_papel_2.jpeg",
+    "imagen": "imagenes/papel.png",
+    "imagenInventario": "imagenes/papelLi.png",
+    "imagen2": "imagenes/papel_2.png",
     "ver": false,
     "texto": "Este papel contiene un mensaje amenazante... quien lo habra escrito? y por que?"
 }
